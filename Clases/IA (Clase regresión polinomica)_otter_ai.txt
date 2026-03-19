@@ -1,0 +1,253 @@
+Unknown Speaker  0:07  
+Vamos a tomarnos la clase para dos cosas
+
+Speaker 1  0:23  
+vamos a hacer un ejercicio aquí práctico. Yo les voy haciendo preguntas en base a pues es la que ustedes han enviado que están trabajando y me han hecho preguntas y han ido a sesiones de asesoría. Me preocupé por ciertas cosas que he visto que están haciendo mucho más
+
+Speaker 1  1:00  
+empático y eso es lo que vamos a tratar de resolver acá. Bueno entonces mientras llegan todos y la explicación para que sea todos recuerden que pues hemos visto regresión lineal pero la asumir linealidad en ciertos problemas es pues realmente una mala aproximación porque no necesariamente los datos se comportan o pueden ser modelados a través del hiperplano. Hay muchos fenómenos que pues básica básicamente no sirven un comportamiento lineal y en consecuencia si yo planteo una línea pues yo puedo hacer regresión claro que la puedo hacer y va a obtener ustedes finalmente el hiperplano sin embargo, va a haber un alto error y va a estar en el fin listo, ya va a ser un sesgo bastante alto y eso es problemático. Para eso uno hace el análisis de los conjuntos de datos para revisar finalmente si el comportamiento por tratar de identificar pistas que le den a uno vea el comportamiento lineal los datos y en particular pues de las variables independientes en relación a la variable dependiente. Entonces dijeron, bueno, pues podemos hacer funciones más sofisticadas que una línea recta, por supuesto, más que un modelo lineal y voy a modelar finalmente las relaciones entre ese vector de características de entrada oeste esa característica de entrada como si fuera un polinomio cierto, como si yo hiciera una transformación. En vez de utilizar 10.º , utilizo un polinomio de 10.º cierto. Fíjense que acá yo estoy modelando una única variable que es 10.º . Si es claro, solo tengo una característica de entrada por ahora y lo que voy a hacer es empezar a transformar el espacio. Ya no solo la necesito en, digamos, en una línea recta, sino quiero también un polinomio grado dos. Hasta acá sería una línea recta, pero entonces agrego otra transformación 1/10 cuadrado hasta un XN, donde norte es el grado totalmente del polinomio. Fíjense que aquí hay algo realmente importante y que causa mucha confusión en ustedes y es que pues sigue siendo lineal con respecto a beta cero, Beta un, beta dos, Beta norte, si se dan cuenta ya no estoy elevando los coeficientes a un polinomio, sino las características de entrada las estoy elevando a un orden superior. Si es claro eso no son los parámetros sino son el vector de entrada en este caso una sola característica de entrada, bueno, listo. Entonces al ser lineal todavía en los parámetros yo todavía puedo aplicar pues métodos analíticos como LS o podría aplicar por supuesto gradiente descendiente sin ningún problema. Bueno muy bien. Entonces aquí está el mismo problema exactamente el mismo tiene los mismos puntos. Aquí estaba la línea recta que pintamos hace un momento y aquí hay diferentes grados. Aquí hay un polinomio de grado dos, que es la azulita básicamente ahí pues parece que estábamos hablando un poquito mejor y tenemos aquí un polinomio de grado cuatro también va reduciendo y entonces pareciera que aumentar y aumentar funciona cada vez mejor no y de repente yo puedo decir bueno si está mejorando está mejorando porque no hacerlo de grado 15 15 está perfecto entonces por todos los puntos error cero
+
+Speaker 1  4:51  
+entonces tampoco es que pueda agregar y finalmente aumentar ese grado polinomio de forma indiscriminada. Llega un punto en que empieza finalmente a hacer su proceso de memorización. Listo, bueno, muy bien, recuerden sesgo es su ajuste, varianza de sobreajuste, cierto, olfiti y lo que quiero es finalmente algún tipo de punto intermedio que no sea su ajuste ni sobreajuste y vamos a ver que ya lo vimos de hecho método para validar eso es pues hacer validación cruzada para mirar qué tan generalizable es totalmente listo hasta aquí hay una pregunta vamos bien bien entonces eso era para una dimensión no aquí Estamos diciendo que solo entra una característica de entrada los problemas que ustedes están manejando, pues tienen muchas características de entrada es un vector de características, número de habitaciones, área total, etcétera. ¿Qué pasa si yo tengo más de una característica? Un error común que suelo ver es que crean que la expansión es simplemente agregar un nuevo término cierto con la característica o la dimensión del vector de características al cuadrado eso es un error común que uno tiende a pensar cierto y pues la realidad que le hace falta a esto realmente hay unos términos cruzados. ¿Se acuerdan del triángulo de Pascal, que les decía los coeficientes de cualquier polinomio? No, ustedes les pasa, por favor, se los aseguro que lo saben. Pero el triángulo de Pascal le decía a usted, bueno, los coeficientes primero y segundo. También había algunos términos cruzados las interacciones que hay entre variables al cuadrado, como es el resultado
+
+Unknown Speaker  7:09  
+esto pues
+
+Speaker 1  7:15  
+básicamente es Una constante. Esta no es tan importante cuando estoy haciendo regresión polinomial. ¿Por qué no es tan importante este valor cuando uno hace la expansión polinomia? No, no tanto. Por eso estos son características, no son valores. Esto es un vector 10.º . En este caso, 10.º en este
+
+Speaker 1  7:53  
+caso y finalmente el método pues va a obtener los valores adecuados, que son esos parámetros que ponderan esas relaciones, pues realmente los coeficientes no importan tanto dentro de la expansión polinomial porque igual uno pueda tener que optimizarlos para la tarea particular. Si es claro, ¿Hay alguna pregunta bien que entonces algo que se les olvida muy frecuentemente y que me encanta preguntar los parciales es el impacto del crecimiento en el orden del polinomio no para dos variables por ejemplo grado dos el modelo completo es este no el vallas los términos lineales los términos fanáticos y la tensión si es claro, está ahí cierto. Miren que aquí no es la expansión. Finalmente los coeficientes pues los estoy emitiendo porque estoy en un proceso de optimización. Voy a llevarlos precisamente para la tarea que a mí finalmente me interesa. Listo. Y esa la interpretación de esta interacción entre las variables es pues porque finalmente es el efecto que tiene una sobre la característica ustedes van a darse cuenta el laboratorio que utilizamos algo para generar todos los posibles términos de la expansión polinómica existe en sitefield un método que se llama polinomial features 1 especifica el grado que le entra, le entra el vector de características y lo que le genera son la expansión. Si se da cuenta todos los valores y qué hace? Pues de fondo Vanessa va a tener que calcularlos. Entonces va a estar la característica sin modificación. Bueno este es el recuerden Delta cero, la característica sin modificación a y 500.º , la primera característica al cuadrado, la multiplicación de ambas y B cuadrado. Eso pues hay que ejecutarlo, no hay que elevar las características al cuadrado. Si ya es el número de habitaciones, pues acá va a tener que elevarla al cuadrado y aquí hay que multiplicarla por B, que es el área finalmente de la propiedad. Hay que hacer esas operaciones matemáticas y se crea una nueva matriz de entrada al modelo de aprendizaje de máquina para dos parece no
+
+Speaker 1  10:37  
+tan grave No para hacer de dos a dos cuatro Cinco seis Bueno, aquí
+
+Speaker 1  10:56  
+está la implementación de polinomial features para que ustedes también luego lo van a usar más tardecito en el lado pero esto crece según una fórmula combinatoria si este es el tamaño del espacio entrada y este es el grado pues el número de variables finales. lo vimos para el grado 12 . seis, pero si empieza a aumentarlo, pues puede llegar a ser bastante grande el número. finalmente tamaño del vector de entrada 10626 .
+
+Unknown Speaker  11:38  
+¿Cuál es el peligro de tener pasar de
+
+Speaker 1  11:42  
+un vector de tamaño este a un vector de tamaño 10000 , solo aumentándole el grado A cuatro. Si tengo menos de 10000 datos, pues con toda certeza más cero cover típico. Entonces no es que yo pueda empezar a hacer aumentos sin considerar el tamaño finalmente o el incremento en el espacio de salida. Listo, si es claro, es una combinatoria en relación al espacio original y al incremento finalmente preguntas hasta acá, afortunadamente eso ya lo hace automáticamente, hace la expansión polinómica lo hace al culear lo hace automáticamente. Entonces pues no es finalmente un proceso que sea común bien puntos claves acá primero, pues hay interacciones entre las variables. Recuerden que a pesar de que el espacio entra mucho más grande, sigue siendo lineal en términos de los parámetros y a medida que ustedes van incrementando el tamaño finalmente del polinomio lo que están haciendo es aumentar el espacio de entrada listo Bien
+
+Unknown Speaker  13:18  
+tres preguntas hasta acá vamos bien
+
+Speaker 1  13:22  
+que se hace entonces necesario cuando estoy aumentando el grado del polinomio, es indispensable hacer validación cruzada muy probablemente combinarlo con una regularización ripsolazo y también una buena idea es aumentar si es posible los datos de la muestra cuando uno aumenta el tamaño del polinomio que estamos tratando de modelar, pues puede ocurrir overfitting muy rápidamente. Listo. Bueno, muy bien. Ahora sí, una vez dicho eso, quiero repasar todo lo que hemos visto de buenas prácticas en un pequeño ejercicio que se hizo con un data center con datos sintéticos. Listo, datos sintéticos muy realistas a lo que ustedes están enfrentando en
+
+Speaker 1  14:21  
+el laboratorio estoy modelando pues una función tan sencilla no es un polinomio grado dos aquí está el término cuadrático está el término mineral y finalmente el país listo bueno le estoy agregando al final ruido para que esto sea lo más realista posible le estoy agregando valores perdidos del 5 % esos altos bajos
+
+Unknown Speaker  14:50  
+es decir puedo hacer imputación
+
+Speaker 1  14:55  
+está razonable y le estoy metiendo algo que son los uplieds un
+
+Unknown Speaker  15:30  
+depende de
+
+Speaker 1  15:35  
+la magnitud y depende en donde usted la encuentre. Los y depende
+
+Unknown Speaker  16:00  
+estrategias
+
+Speaker 2  16:27  
+pregunta es que digamos en la en el laboratorio hay unos que son como negativos en allí quitar esos esos datos puede dañarlos o es como muy significante fallas.
+
+Speaker 1  16:40  
+Si está en la variable que predice es aún más grave, deberían eliminar la fila por completo. Bueno, listo. Entonces aquí ustedes ven un poquito, aquí está, pues lo que se espera. Si se Dan cuenta tiene un poquito de error porque se le metió error a propósito que era un aleatorio. Y aquí están los online y este particular que está acá es que este perdón este particular que está acá es extremadamente alto les quiero hacer una pregunta con todo lo que ustedes han trabajado, ya todo lo que hemos visto en regresión. Cierto, la pregunta es esta ¿En qué afecta tener unos layer en la variable que voy a predecir su compañía? Lo acabo de decir en y en qué afecta esa variable
+
+Speaker 1  17:59  
+cuadrados para estos valores
+
+Speaker 1  18:19  
+solo son tres, pero le van a modificar mucho el promedio del modelo y el R cuadrado es una comparativa contra un supuesto modelo que siempre predice la media listo entonces el R cuadrado en particular se ve altamente afectado por los suflix en la variable a predecir si es claro yo no sé cuánto es la diferencia pero más oeste menos quitando los sopliers del laboratorio la variable y pasa de cero a cero. Cinco más no sé exactamente es una cosa bastante alta listo y simplemente es por la eliminación de los suplidos. Es claro. Ahora, ¿por qué es menos grave en bueno, ya lo hizo su compañero, pero ¿Por qué si yo tengo un vector de características es menos grave en las características tener offliners que la variable es dependiente es
+
+Unknown Speaker  19:30  
+dependiente
+
+Speaker 1  19:40  
+algo y lo puedo tener en la variable que estoy prediciendo, porque es más grave tenerlo acá que tenerlo acá. Al final, yo puedo, a través del modelamiento de la misma regresión, pues se puede, cierto, a través de los parámetros que aprenden tratar de reducir el efecto de SUV el proceso de aprendizaje con los beta eso hace parte de lo que está aprendiendo un error que tiene un ruido y ese ruido pues es manejable mientras que en la variable de salida pues le estamos creyendo es nuestra señal de supervisión estamos diciendo pues esto es lo correcto, cierto y lo correcto pues esperamos que no tenga un error. Finalmente la muestra tan alta sea evidencia lo más certera posible, pero
+
+Speaker 1  20:44  
+mientras estés en este espacio de entrada, tú lo puedes manipular. Entonces podemos manipular los solidgers en el espacio de entrada. En el espacio de salida es mucho más complicado hacer ese proceso porque reitero, es la señal de supervisión acá En ese orden de ideas, ¿Cuál es el primer paso que hay que ejecutar para hacer la regresión cualquier rueda de
+
+Unknown Speaker  21:33  
+machine learning? Imputo por
+
+Speaker 1  21:38  
+la media, por ejemplo, imputo por la media de el Lab, si es muy alto, pues esto va a modificar la media un solo Punto. Les podemos
+
+Unknown Speaker  21:58  
+buscar la media
+
+Unknown Speaker  22:01  
+inicial porque también se
+
+Speaker 1  22:15  
+primero primero eliminen repetidos. Listo. O sea, filas que son repetidas se tienen que ir porque corren un riesgo grave y es que cuando estén haciendo el proceso y no eliminan pueden quedar en entrenamiento y en testing eso es gravísimo listo más grave aún que lo que puede generar no eliminarlo se tienen que eliminar primero antes de hacer imputación, los que me mostraron esta mañana que estaban haciendo imputación y no eliminaban los solares y les daba un R cuadrado negativo. Solo cambien eso, solo cambien eso y se los aseguro. No sé qué tan positivo es, pero pasa positivo, se los aseguro. Listo, solamente haciendo ese cambio. Ahora la imputación a través funciona en muchos casos, pero hay que tener cuidado en qué escenarios también se los había explicado antes en clase
+
+Unknown Speaker  23:28  
+tenemos acá de valores perdidos máximo yo
+
+Unknown Speaker  23:33  
+introduje cinco en el laboratorio
+
+Speaker 1  23:40  
+no hay tanto problema, pero si ustedes tienen ya más de 10 20 % imputo por la medida, ese 20 % que es lo que estoy haciendo, ¿se acuerdan? Eso es malo, pero porque era malo,
+
+Unknown Speaker  23:57  
+estoy moviendo la medida global después
+
+Speaker 1  24:01  
+y estoy distribución, que ya vienen los datos ya a partir del 20 % . ¿se acuerdan que yo les mostré una gráfica antes de imputar y después de imputar y cambiaba la forma de la distribución? estoy manipulando los datos que no debería, oeste sea, más de un 20 % . ya yo no me acuerdo en qué clase les dije ya más de un 20 % . venga, vuelva otra vez y arregle el dataset o elimine esa columna. Son demasiados valores
+
+Unknown Speaker  24:39  
+acá ahorita sí, parto y luego
+
+Speaker 1  24:42  
+sí voy Entonces primera cosa que hicimos es detectar y eliminar los medios listo yo aquí estoy utilizando el método que a mí me gusta que es el de intercorpín me parece más robusto que las tres desviaciones pero cualquiera Vamos estables listo no pasa nada pero si no ha imputado me genera error hacer estas operaciones con valores que están en nada pues filtren primero quítelos Y detecte un like son Los que no son nada
+
+Speaker 3  25:39  
+supongo cualquiera de los dos métodos está bien como varias dimensiones como que en cada característica en
+
+Speaker 3  26:10  
+alguna en
+
+Speaker 3  26:19  
+alguna ah ok la combinación llamaba
+
+Speaker 1  26:29  
+eso cuando se relacionan dos variables multicolonia entonces estamos asumiendo eso no no se da en la realidad muchos fenómenos no se dan. Entonces hay mejores modelos por ahora nos toca sufrir con eso.
+
+Unknown Speaker  26:53  
+Después vamos a ver modelos que
+
+Speaker 1  26:56  
+abordan mejor el tema de dependencia entre variantes de entrada Bien, entonces luego viene de el proceso de eliminar los sureños. Lo que tienen que hacer es la imputación, por favor. Para los que esta mañana estaban haciendo imputación antes, pues primero tienen que eliminar los sublimes y luego sí hacer la imputación. De hecho el ejercicio está bonito. Yo no lo hice, pero me encanta que si imputan directamente no sirve. Está bien porque eso es lo que finalmente queríamos hacer. Listo, ahora vamos con la validación. Lo primero que se hace y en esto también vi varias cosas. Otro grupo no es el mismo esta mañana listo. Está haciendo Cross validation con todo el dataset. ¿Para qué sirve validación cruzada? Yo lo expliqué. No, no sirve cuando tengo pocos datos, lo puedo no usar con pocos datos, pero no era para eso.
+
+Unknown Speaker  28:00  
+¿A qué grado la validación? Creo
+
+Speaker 1  28:13  
+cuatro utilizo uno para evaluar para testing y el resto para trading. Listo y entreno un modelo y calculo una métrica el error, por ejemplo, luego cojo el otro fragmento y utilizo el resto, es decir, lo que está acá como training y calculo la métrica, es decir, si tengo cuatro Fords, cuatro grupos, voy a calcular cuatro modelos 4 métricas de error. Cierto promedio esas cuatro métricas de error y ese es pues con el cual hago algo que hago. ¿Para qué sirve? Esto Muy bien. Sirve para comparar modelos. No sirve para ninguna otra cosa más comparar modelos y el que me dé mejor en el promedio de los cuatro folds es que el que en teoría tiene mejor capacidad de que generalizar. Una vez yo ya tengo cuál es el mejor suponga tengo una regresión lineal, tengo una regresión lineal tengo después de aumento a un polinomio de grado dos, entonces una regresión polinomial de grado dos, luego una regresión polinomial de grado tres. Listo y me dice, oiga, como lo vamos a ver ahorita, no sé cuál es el que da mejor, pero supongamos que el que me da mejor es la regresión polinomial de grado dos. ¿Qué hago después? Ya sé comparé los tres regresión lineal y empecé a aumentar el grado polinomio y me salió mejor en promedio de esos K Force la regresión polinomial de grado dos que hago a continuación, reentreno el modelo que escogí en todos los datos de entrenamiento si es claro, no ni con el último. Si ustedes aplican Cross validation inside Killer, al final les queda un modelo. Ese es el último modelo entregado en los cafalls. Ese no lo utilizo.
+
+Unknown Speaker  30:21  
+Esto solo me sirve para una
+
+Speaker 1  30:29  
+cosa que solo va a utilizar una vez, una sola vez y no lo va a utilizar para hacer entrenamiento, lo va a utilizar simplemente para calcular un conjunto de métricas para saber que también es y este 70 % si usted quiere comparar diferentes modelos es el que va a utilizar para hacer Cross validation. Si es claro entonces no me pueden llegar en una en el laboratorio a hacer con el conjunto de datos completos sin separar sobre el conjunto de test sí bueno ahora una pregunta que puede surgir es tengo muy poquitos datos Muy muy poquitos pero extremadamente pocos bien cuando el problema es muy limitado en datos, muy limitado a la tarea, pero eso es la única justificación. Se coge todo y se aplica training y se hace Cross validation. Pero en este curso no vamos a ver ningún escenario de ese nivel features
+
+Unknown Speaker  32:00  
+entra el grado como si
+
+Unknown Speaker  32:10  
+fuera un parámetro yo aquí estoy
+
+Speaker 1  32:14  
+voy a probar diferentes grados de polinomios entonces estoy haciendo un pipelines alquiler y defino primero como entrada entonces secuencial es enviarlo a polinomial features porque qué está haciendo el espacio de entrada no es el espacio original bueno si de es igual a un pues no pasa nada va a quedar igualito pero si pasa de igual a dos pues me va a generar los otros términos de la expansión polinómica. Cierto, me los genera. Yo tengo un vector de entrada de tamaño dos, pues voy a pasar a un vector finalmente tamaño seis con todos los factores de la expansión polinómica estoy y esto automáticamente calcula los cuadrados las multiplicaciones entre dimensiones ya finalmente amplía la matriz de entrada para entrenamientos y es claro entonces voy a ir aumentando lo primero es aumente el tamaño del espacio de entrada con la expansión polinómica eso es lo que Hace polinomial features luego aquí viene que hace esto el estandariza vimos diferentes estandarizaciones, básicamente una escala Z, asumiendo que es copcial. Bueno, ¿y por qué tengo que pasar de magnitudes variables a magnitudes en servidumbre más importante en las escalas acelera el entrenamiento muy bien y para que una variable no predomine las primeras iteraciones del entrenamiento todas van a tener el mismo peso no aprender magnitudes, sino realmente que es lo relevante cada uno. Y aquí viene un regreso lineal que depende también del grado finalmente del polinomio. Es muy sencillo, no hay nada aquí, nada raro y por cada grado de polinomio que estoy testeando, hago finalmente la validación cruzada utilizando los datos de entrenamiento. Listo, utilizando los datos de entrenamiento calculamos aquí el NC cierto y bueno ya aquí es una gráfica que la pueden hacer muy fácil aparece el grado de polinomio y utilizando Cross validation la media de NC pues la media sobre los resultados de todos los Ford. Afortunadamente
+
+Speaker 1  35:33  
+10 . Ah, bueno, está fácil de calcular. Si yo les digo que el número del fold será 10 , ¿Cuántos modelos entrenaron para generar esta gráfica que
+
+Unknown Speaker  35:53  
+aparece acá, 10 . Solamente 10
+
+Unknown Speaker  36:01  
+para calcular el grado
+
+Speaker 1  36:06  
+del polinomio, hice Cross validation y entrené finalmente 10 modelos Bueno, muy bien, entonces este es el grado de polinomio y ustedes pueden ver aquí desde cero hasta 14 2468-1012 y aumentando y el mejor que dio en este caso en términos del milésimo 100.º fue el grado dos. Listo, ese fue el que dio mejor resultado. En teoría, debería tener la mejor capacidad de generalización. Bueno, entonces una vez ya tengo cuál es el mejor modelo, aquí estoy comparando múltiples modelos, no de grado un, dos, tres, cuatro, metí hasta 14 . Seguramente aquí ya tengo varios problemas de cobertizos. Una vez ya identifique cuál es el modelo óptimo, pues no óptimo, perdón, el mejor modelo el que tiene la mejor capacidad de generalización entre los que compare que solamente son estos que aparecen acá. Vuelvo otra vez y hago un reentrenamiento sobre todo el conjunto de entrenamiento. Listo, ya sé que el grado dos es el mejor entreno sobre todo el conjunto de entrenamiento utilizando bueno Muy bien, ahora viene ahora sí la evaluación final. Hasta aquí solo tengo el modelo
+
+Unknown Speaker  37:52  
+entonces
+
+Unknown Speaker  38:00  
+es que normalmente
+
+Unknown Speaker  38:28  
+bueno, hasta aquí vamos bien.
+
+Speaker 1  38:31  
+Si ustedes hacen eso hasta acá ya deberían tener en su laboratorio R cuadrado positivo y ya lo que tienen que jugar es hacer características ya tienen que jugar es a mirar qué característica quitan, qué ponen, etcétera, ya después que jugar, pero ya es un R cuadrado positivo, listo, ya ahí entran a hacer otro tipo de cosas que ya vienen Finalmente de su creatividad y su análisis de los datos ahí si no me va a meter bueno una vez ya tienen eso ya tienen el modelo final entrenado sobre todo el conjunto de entrenamiento hacen la evaluación final sobre el conjunto de test no se tocó para nada y si lo ven por ahí en alguna parte Del no pus debilidad un error listo, esto solo se toca en la evaluación final. Cojo ya el modelo entrenado y evalúo como edad. Listo. Entonces, ¿qué métricas vimos realmente sacar un reporte de todo? No es difícil. No sé por qué los estudiantes me dijeron, pero si ya saqué el LMC porque tengo que sacar el RNC no? Más bien la respuesta ah no es que la tenga que implementar si quiero ah simplemente es poner una línea ahí para sacar el el valor este caso me dio un RMC de cero. 30 sabe el contexto del problema, uno no sabe esta magnitud si es grande oeste es pequeña, depende listo depende y aparte puede estar el error sobre el escalamiento entonces uno no sabe Si cero, 30 exacto 30 es coherente comparado con la es coherente Finalmente, comparado con la media en este caso es mejor con un modelo que siempre predice la media cero. 89 bastante alto. De hecho, pensé que iba a ser más alto. Parece que le metí mucho ruido, pero bueno, cero. 89 sigue siendo bastante bueno. Un R cuadrado que no sea bueno si está por debajo de cero. Cinco. Me parece que es dudoso, entonces tienen que subirlo por encima de cero. Cinco. Estoy seguro que se fue en el laboratorio por encima cero. Cinco. Creo que ya varios lo han notado. Bueno, finalmente una visualización de datos para mirar cómo fue nuestro modelo? El ideal porque recuerden que yo partí de una función cuadrática y le metí ruido. El ideal es la verde. Este es el ideal. Aquí están los puntos de entrenamiento, que son los grisecitos, si se dan cuenta, pues le metí alto ruido. Y están los datos de prueba que son los rojitos y finalmente nuestro modelo polinomial entrenado que es la línea azulita. Listo. O sea ahí uno se puede dar cuenta pues que fue bastante bueno listo fue bastante bueno
+
+Unknown Speaker  41:56  
+preguntas del pipeline
+
+Speaker 1  41:59  
+tienen alguna duda de laboratorio de lo que tienen que es
+
+Speaker 1  42:15  
+una entrega conjunta entre secciones como compiten por El bono. Ese es el problema. Si fuera por mí
+
+Speaker 1  42:33  
+Listo, bueno, ahí está el laboratorio
+
+Unknown Speaker  42:38  
+para que se entretengan encontrar en el repositorio
+
+Unknown Speaker  42:46  
+y para eso, entonces Por favor entren
+
+Unknown Speaker  42:50  
+al repositorio
+
+Unknown Speaker  43:40  
+papi lo siguiente práctica
+
+Unknown Speaker  43:47  
+lo primero
+
+Speaker 1  44:01  
+es que si en dos partes. La parte uno es utilizar machine learning clásico, lo que estamos viendo para una tarea de clasificación de tesis. Después vamos a ver más cómo representar el texto en un espacio vectorial. Por ahora, ¿qué quiero que hagan en la parte uno? Listo la parte uno, porque por ahí ya alguien se despistado me dijo, pero no está la invitación, pero no está la invitación para la parte dos. El proyecto en su totalidad tiene dos entregas, es decir, son dos competencias. La parte uno ya está. Entonces ustedes entran acá? Pues ya no desafortunadamente no me acuerdo del usuario de cargo acá todo lo tengo en contracciones en mi equipo pedir que hagan esta semana, por favor se registran de manera individual y luego, antes de hacer cualquier envío, primero crean el grupo siguiendo el tutorial de creación de grupo se acuerdan cuál era la
+
+Unknown Speaker  45:06  
+el estándar de nombre
+
+Speaker 1  45:09  
+los expliqué también los grupos de los por ejemplo si pertenecen dos al grupo dos Sección dos pues es si aquí esta sección cuál es
+
+Speaker 1  45:25  
+unidades una
+
+Speaker 1  45:36  
+vez ya arman el equipo ya pueden enviar empezar a hacer su Vision a nombre del equipo. Bien, todavía no hemos visto cómo representarte esto. Entonces, cuando lo veamos, ya pueden empezar a trabajar sobre la tarde importante. Esta competencia se cierra el 13 de abril . Ustedes dirán pues hay bastante tiempo. Si hay bastante tiempo,
+
+Unknown Speaker  46:03  
+pero no es
+
+Speaker 1  46:11  
+un problema que sea fácil. Si fuera fácil, sería laboratorio entonces vamos a ver empezamos clasificación la otra semana y vamos a estar hablando muy frecuentemente la competencia para que empiecen a entender de qué se trata el asunto. Bueno, pero lo importante es que se suscriban a la competencia. Hay unas fechas máximas, pero es como un mes, pero se le puede pasar la inscripción de su grupo y ahí ya no tenemos mucho que hacer. Listo, por favor vayan entonces al material de la clase. Van a regresión polinomial y hacen finalmente es enorme que Los 15 min solo leen y lo terminan de revisar
+
+Unknown Speaker  47:20  
+escrito
+
+Speaker 1  47:55  
+habían un par de grupos que me escribieron esta mañana. Si tienen preguntas del lado,
+
+Unknown Speaker  48:01  
+me las pueden hacer acá.
+
+Unknown Speaker  50:20  
+Sí porque
+
+Unknown Speaker  51:00  
+una pregunta para el bono una pregunta
+
+Unknown Speaker  51:27  
+discutir la penalización.
+
+Speaker 1  51:34  
+Ah OK, es como multiplicar un
+
+Unknown Speaker  51:40  
+factor multiplicativo
+
+Unknown Speaker  51:44  
+Por ahora tienen que mirar lo máximo
+
+Transcribed by https://otter.ai

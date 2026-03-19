@@ -1,0 +1,229 @@
+Speaker 1  0:00  
+Perfecta en estas dos variables en particular y alta. Esa es una fuerte correlación, pero no exactamente perfecto. Ustedes pueden ver acá. Quizás no se ve tan bien nuevamente como para recordarles el ejercicio que hemos trabajado hasta este momento. Esto es una gráfica en Python de el dataset Python casi perfecta entre habitaciones diarias que tiene diarias que tiene lógica. Si uno lo hiciera uno finalmente mira dos puntos, pues puede deducir claramente que hay una alta relación lineal entre esas variables. Si fuera uno ¿Qué pendiente va a tener esa red?
+
+Unknown Speaker  1:05  
+Si la correlación fuera uno, lo
+
+Speaker 1  1:08  
+más probable es que esa línea recta que pendiente va a tener uno cierto crece el mismo valor en ambos sentidos, esto crece en la misma magnitud, entonces su pendiente va a ser uno muy cercana a esto también es un y habíamos visto que eso es malo porque en regresión lineal, cada una de las características tiene una ponderación, un teta que me dice su importancia y el aporte. Finalmente la predicción cuando tienes finalmente la misma una alta correlación, es difícil para el modelo finalmente saber cuánto mover esos teta en cada una de esas para cada una de esas características no sabe cuánto moverla porque se acuerdan que el supuesto de la regresión lineal es que no existen precisamente con linealidad. Entonces es complicado encontrar esos valores. No es tan simple para un modelo duplicar y aparte de utilizar los valores de teta para esas dos características, lleva a también predicciones erróneas. Entonces, eso es difícil cierto, y eso no lo queremos una forma que no habíamos visto uno puede hacerlo a través de las gráficas, la matriz de correlación, pero existe algo que se llama un factor de inflación la bonianza, y utiliza el poderoso R cuadrado. ¿se acuerdan el R cuadrado? La última clase con mi combinamos contra ¿Qué
+
+Unknown Speaker  2:58  
+contra parcial,
+
+Speaker 1  3:14  
+en fin, entonces una forma de estimar el factor de inflación de la varianza por cada una de las variables, también el R cuadrado es varianza, porque al final, si yo resto el valor predicho el valor real del valor de media, pues es la varianza una forma de estimarlo, no para el modelo completo, sino por características utilizando el factor de inflación de la variante. Y yo voy a calcular un R cuadrado particular, es el R cuadrado para cada característica. Esto es como si estuviera haciendo el mismo análisis del R cuadrado, pero por característica, tomo esa característica 10.º sub J como si fuera la variable dependiente. Hacemos una regresión sobre sobre XJ, tomando los otros atributos y calculo el R cuadrado si es claro, es decir, estamos midiendo ya no la varianza del vuelo en su totalidad, sino de una característica. Bien, y podemos hacer algunos análisis al respecto. Si sacamos la fórmula, no podría sacarlo directamente, pero esta es más directa porque nos da unas magnitudes. Es el inverso del un menos el F cuadrado de esa característica J particular. Bueno, y que puedo deducir de esa métrica. Esto es lo que dice la literatura en general. Si el bife es igual a un y podemos mirarlo, quiere decir, pues básicamente que ese recuadrado es cero cierto. Por lo tanto, no hay correlación alguna con otros predictores lo pueden ver de esa forma. cierto. si está entre un 5 , hay una correlación que es moderada y vamos a suponer que es aceptable si existe correlación entre las variables, pero es aceptable si es mayor a cinco. la multicolenidad es preocupante. usted debería revisar las características y seguramente descartar algunas si es mayor a 10 hombre, usted está repitiendo características esto ese es el mensaje y hay que eliminar sí o sí esa variedad. Bueno, piensen un momento en esto que es lo que estamos haciendo Finalmente, cuando hacemos el análisis, estamos calculando el R cuadrado para una característica y, en últimas, yo qué esperaría si no hay multicolinealidad que sea bueno ese regresor tomando esa característica como variable dependiente Omar, ¿cómo debería ser ese regresor para eso? Muy bien, entonces esperamos que para predecir un XJ, los otros 10.º que están en mi data no son buenos, no son capaces de predecir esta variable. Eso es lo que estoy diciendo con valores menores a cinco. si yo tomo esta como la variable predecir y cojo las otras como regresores y no son capaces de predecir mi variable, quiere decir, hombre, son independientes, la solución de independencia se cumple y eso vamos a asumirlo entre un 5 en el taller. creo que está entre uno 4 . Es un poquito más ustedes van dependiendo la regresión que usted construyó, pues está modelando perfectamente esa variable. Las otras variables pueden son capaces de predecir esta va a tener un R cuadrado de qué naturaleza alto, bajo, si el regresor es muy Bueno, alto y
+
+Unknown Speaker  7:04  
+entonces ahí
+
+Unknown Speaker  7:17  
+sí depende
+
+Speaker 1  7:21  
+depende ya mayor a 10 lo vamos a asumir como hoy hay algo de hecho, aquí está el cálculo, ustedes pueden ver aquí el cálculo ya habíamos visto en la matriz de correlación entre área y habitaciones que tenían la correlación de cero. 96 casi perfecta y el factor De VIF para esas variables es
+
+Unknown Speaker  7:50  
+ambas
+
+Unknown Speaker  8:11  
+una
+
+Speaker 1  8:22  
+pregunta lo van a poner en práctica en este laboratorio?
+
+Unknown Speaker  8:29  
+Recordando, recordando
+
+Speaker 1  8:32  
+esto lo he explicado tres veces. El error total es la suma del sesgo de la varianza y el error irreducible, que también lo llaman ruido inevitable en cualquier proceso de medición. Listo, por pequeño que sea ese error irreducible siempre va a existir. Esto es inherente al proceso de medición del dato. Vamos a decir que un modelo tenemos que entender dos conceptos cuando está un déficit y cuando está sobre ajustado
+
+Speaker 1  9:17  
+ajustado memoriza bien. Cuando memoriza los datos, ya les voy a explicar cómo se ve un modelo que memoriza finalmente los datos. Y eso significa que tiene una alta varianza. Si yo cambio algo de la entrada se despelota. Recuerden que esa es la varianza, la sensibilidad. Finalmente al ruido cambio un poquito la entrada y los resultados cambian drásticamente. Y cuando está un déficit es que tiene un alto sesgo. No, eso es probablemente un error de decisión suyo equivocado cuando está underfitin es o que seleccionó mal el modelo sus hiperparámetros con el proceso de entrenamiento no fue suficiente. Entonces podemos preocupa? Nos preocupa lo que no podemos controlar, el que no podemos controlar directamente por ahora es el overfit bien, no hemos visto ninguna estrategia para ver eso digamos esto es un verfiti, esto es los datos reales, cierto, de hecho se sacaron de una función en este caso que es de grado cuatro polinomios simulado y aquí están los puntos. Y aquí está la función y yo lo modelé con una línea recta. Está bien cree Vale, el error va a ser bastante alto. ¿Qué tipo de error es alto acá de la varianza? No el sesgo listo. El sesgo yo seleccioné más el modelo, debí seleccionar uno mejor que represente mejor, digamos, la dinámica de los datos. El error a nivel de sesgo va a ser alto. Aquí está el ajuste ideal, un polinomio de grado cuatro. Ahí está el modelo y ese sí va a tener un error mucho menor, su sesgo es mucho menor no memoriza los datos pero si la dinámica si se dan cuenta la tendencia como la modela y cuando esta overfitting es cuando hay un proceso una alta varianza hay un proceso de memorización acá ya el modelo pasa exactamente por todos los puntos pasa por todos los puntos y ya pues eso no es bueno porque porque cuando yo le ponga un nuevo punto se lo pongo por acá seguramente su predicción va a ser muy alejada de la realidad. O sea va a tener un alto ruido sensibilidad ruido cualquier puntico por fuera de lo que memorizó, pues ya no le sirve. Yo cuando explico la varianza, siempre les doy el ejemplo. Cuando ustedes entregan para un parcial. Hago una diferencia entre memorizar y entender el concepto. Si usted lo memoriza en los ejercicios, si no los entiende, yo le pongo un ejercicio diferente, no lo va a poder hacer. Pero si usted fue capaz de generalizar, entendió los ejercicios y no los memorizó, yo le cambio cositas al ejercicio valores numéricos y usted igual lo puede hacer porque memorizó lo que correspondía, generalizó el problema que está abordando es exactamente igual. Entonces, el overfitting es algo que ocurre muy frecuentemente y en particular uno de los modelos más avanzados que vamos a ver en las regresiones les pasa muchísimo y las redes neuronales son un conjunto de regresiones. Están altamente propensas a que memoricen los datos. Hay un también un factor importante de memorización de datos. Con lo que finalizamos la clase pasada es la maldición de la dimensionalidad. ¿Se acuerdan que dije la maldición de la dimensionalidad cuando ocurre cuando tenías más características que datos? Muy bien, cuando hay más características de datos, es el ejemplo típico. También puede ocurrir cuando usted tiene hartos datos, pero hartos datos pero también tiene muchísimas características pero cuando siempre ocurre cuando cuando hay más datos que características más características que datos y eso pasa muy frecuentemente en redes neuronales porque los modelos son muy grandes, tienen muchísimas neuronas y usted va a entrenar con un dataset de 100 ya, por ejemplo, un modelo Wert que lo vamos a ver hacia el final de la clase, que es un Transformer tipo encoder, pues el más chiquito tiene 110 millones de parámetros. ¿se acuerdan de esos y usted de repente la va a entrenar con 100 muestras y cada una de esas muestras tiene tamaño. Un vector de tamaño, no sé, pongamos
+
+Speaker 1  14:03  
+esto es mucho menor que 210 millones que tiene que es lo más fácil. Si usted tiene que darle si usted está optimizando el congrediente descendiente con una función de costo, va a ser error, pues memorícelo, le va a dar error cero tiene por cada neurona, memorice un dato, no ni siquiera por un conjunto de neuronas. Memorice un dato, es de tamaño 100 , 100 neuronas por dato y memoriza los datos. Listo. Y eso es un problema porque no queremos que memorice, queremos que generalice, y esto pasa muy frecuentemente, entre más grande sea el modelo, entre más parámetros tenga, más posibilidades hay de que memorice cierto, por eso el punto ideal. Yo me estoy moviendo aquí de grado un pase al grado cuatro. Bien, pasé al grado 15 y ya la grabé. El proceso ideal es ir de forma incremental. Si yo tengo dos modelos que tienen el mismo rendimiento, ¿cuál escojo
+
+Unknown Speaker  15:04  
+entonces cuando
+
+Speaker 1  15:13  
+uno no se entrena de cero, listo, estos modelos, cuando son muy grandes, tienen dos fases, un pre entrenamiento y que usualmente uno no lo hace porque no tiene capacidades computacionales. Por ejemplo, no tenemos capacidad computacional. Eso solo lo entrena en Google ni crea universidades en el mundo con prestigiosas lo pueden hacer. O sea, solo las grandes compañías. Entonces, uno coge un modelo ya pre entrenado en datos que son de billones del orden de billones de tokens. Por ejemplo, GPT tres entrenó en 800 millones de tokens. Es un dataset gigante. Si uno coge ese pre entrenado y lo que hace es una fase de post entrenamiento que también la llaman tuner. Listo. Y ahí si usted no necesita, usted no necesita tener muchos datos tienen que ser mayor a los parámetros
+
+Speaker 2  16:28  
+mucho mayor o con que sea más
+
+Speaker 1  16:34  
+de 10 más de 110 millones no hay
+
+Unknown Speaker  17:03  
+200 millones de
+
+Speaker 1  17:13  
+muestras para entrenar. No sé si un trabajador de samsung le subió un excel a chatgpt para hacer correos automáticos para los clientes. y en ese excel se fueron tarjetas de crédito los finales del 2023 . si escucharon esa noticia 2023 hizo eso, le automatizó la reconstrucción de los datos. después, en el 2024 utilizaron los datos pues todo, no sé si ustedes sepan, pero todo lo que ustedes hacen en chat gpt, que no es pago, lo utilizan para entrenamiento. si sabían oeste no sabían. listo, en el 2024 , en la versión tres, en el copilado tres de gpt tres cinco entrenaron con todo lo que habían subido y empezó a escupir tarjetas de crédito de personas reales de corea del sur
+
+Unknown Speaker  18:14  
+empezó a escupir eso
+
+Speaker 1  18:17  
+y y por qué? porque hizo orfitin sobre un conjunto selecto de datos y preciso memorizó las tarjetas de crédito de un conjunto de Personas? ¿Es grave? Eso sí, obvio. Obvio que sí.
+
+Unknown Speaker  18:42  
+Imagínense es importante
+
+Speaker 1  18:45  
+entonces como nosotros podemos empezar a mitigar los efectos de hacer overfitting. Listo, entonces recuerden overfitti cuando tenemos una alta varianza sensibilidad al ruido cuando uno entrena modelos que tiene overfitting uno se empieza a dar cuenta que los parámetros teta tienen valores y magnitudes muy grandes y eso es para ajustarse exactamente a los valores listo para que cuando llega un valor por una característica memorizó ese valor tiene que ser prioritario y la multiplicación del teta por ese valor más la suma de los otros tiene que dar exactamente lo que es el dato en el conjunto de entrenamiento. Y entonces empiezan a tener valores demasiado altos, magnitudes muy grandes van a tener esos test. Entonces la estrategia más simple para poder mitigar eso es poner dentro de la función de costo alguna función que penalice por ahora, que contabilice la magnitud de los valores que está obteniendo el proceso de entrenamiento, los Tepa los parámetros si es claro necesito penalizar que estos valores sean muy altos voy a tener también un hiperparámetro que es Landa que es un factor de ponderación entre más alto sea pues va a tener más peso en la función de costos si se dan cuenta más alto va a ser cierto. Y recuerden que esto es función de costo. Esto que queremos hacerlo maximizarlo, minimizarlo, minimizar, minimizarlo. Y si esto es más alto quiere decir que es más problemático. Le estoy diciendo, oiga, esto está mal, estoy dando una señal de supervisión de él que si esto está alto está mal, no siga por ese camino. Necesito que sea más bajo los temas no solo el error, sino también finalmente la mano, si es clara la idea. Bueno, aquí existen dos mecanismos ampliamente conocidos que tienen que ver con normalización para poder hacer entonces pues cuál es una forma fácil coja todos los el vector de tetas y él coja cada dimensión el nivel al cuadrado y esa sumatoria multiplicado por este lambda va a ser sumado a la función de costo bueno es evidente que la función de costo va a ser cada vez más grande si esos tetas son cada vez más grandes. Por lo tanto, está cumpliendo su objetivo. ¿Qué características tiene? Después las vamos a ver más adelante que se va a necesitar esta para otras técnicas de men pues efectivamente reduce la magnitud de todos los tetas. Funciona bien con multicolinealidad, pero tiene una propiedad y es que al ser cuadrática, pues aquí ustedes están viendo básicamente el valor de Lambda escalado, cierto, este valor aquí es 10 , aquí es cero, un aquí es 100 , aquí es 10 , perdón, y aquí es 100 . Listo. Entonces para diferentes valores del año y por acá ustedes ven los valores de los coeficientes. Listo en un ejemplo simple en el que siempre hemos hecho, que es la predicción de el valor de una casa, qué es lo que está sucediendo y qué es lo que uno puede ver, ¿Qué pasa con esas si la magnitud del coeficiente es alta? Si se dan cuenta tres y menos cuatro son altas en comparación a las otras? Se dan cuenta ¿Qué pasa? Lo trata de mandar a cero, pero nunca va a llegar finalmente a ceros, porque por la función cuadrática,
+
+Unknown Speaker  22:39  
+otra estrategia de
+
+Speaker 1  22:46  
+penalización menos evidentemente, si yo leo al cuadrado y es un número grande, esa magnitud va a ser aún más grande y entonces pues va a haber mayor penalización con esto penalizó menos cierto y la diferencia es que con esta finalmente estrategia de regularización si puedo llegar a valores muy cercanos a cero como estrategia de regularización, ¿Cuál es el problema de llegar a cero en una teta? Esa característica exactamente puede llegar a eliminar características. Listo. Bueno, si ustedes me preguntan, hay millones de teorías sobre cuál utilizar en qué caso, qué caso para domingo medicina si es una regresión con variables que tienen son ordinales. No ahí ustedes pueden buscar. Hay miles de recomendaciones sobre cuál utilizaré dos les voy a dar la mía. La mía es esto es difícil de implementar, es un hiperparámetro en una línea de código, lo que tienen que hacer es prueben ambas y cuáles da mejor
+
+Unknown Speaker  24:09  
+aquí? No es
+
+Speaker 1  24:12  
+si uno lo puede probar empíricamente en su en su problema particular. Es fácil de calcular. No hay razón para no probar las armas y utilizar la que funciona? Finalmente, bueno, eso es a nivel de regularización para regresión. Después vamos a hablar un poquito más de esto, pero por ahora eso es lo que necesitan saber hasta aquí. ¿Alguna pregunta más? Bien, bueno, estamos hablando de generalización y de pues que tenga la capacidad de modelo de aprender la dinámica de los datos más no memorizarlos. Eso también tiene que ver con las particiones que yo haga o sea tengo que entregarlo bien para evitar también que haya esa memorización. Entonces recuerden las particiones uno tiene que hacer particiones de entrenamiento y prueba cierto las de prueba, los datos de prueba nunca se van a utilizar en el entrenamiento. Esto lo que me va a permitir es ajustar los parámetros desde por lo tanto, reducir el error de sesgo. Listo son los recuerden el error de sesgo es el error asociado a la selección y los parámetros del modelo y los prueba los datos de prueba. Ustedes van a estimar el error sobre unos datos no vistos en entrenamiento. Eso les va a permitir estimar el error también de sesgo y también hace el análisis del error de varianza eso Ya lo habíamos visto. Yo creo
+
+Unknown Speaker  26:01  
+que no hace falta
+
+Speaker 1  26:04  
+profundizar otra estrategia para seleccionar correctamente el modelo. El que mejor generaliza es utilizar una estrategia de partición denominada validación cruzada es un hiperparámetro. Usted selecciona y dice bueno, el problema del anterior es que de repente, pues usted es la aleatoriedad, que esto debe ser aleatorio de repente por la aleatoriedad. Usted escogió unos fáciles de prueba así
+
+Unknown Speaker  26:45  
+claro entonces en cuando estoy
+
+Speaker 1  26:48  
+haciendo variación cruzada dice bueno, para curarse en salud parta el dataset en K en este caso hay cinco partí el dataset en cinco fragmentos y voy a utilizar cada uno de esos fragmentos al menos una vez como test, es decir, cojo estos cuatro como entrenamiento y pruebo con este, cojo estos cuatro como entrenamiento y pruebo con el siguiente, así sucesivamente. Así te puedes dar cuenta que siempre al menos una vez un dato antes de la partición es usado para evaluación. Si se dan cuenta, siempre, al menos una vez va a ser el dato usado para test. Ahora ustedes dirán pero entonces, como computo las métricas, va a computar el promedio del error sobre todos los modelos entrenados aquí va a entrenar cinco modelos diferentes sirve para comparar modelos. Yo voy a escoger los escoger los modelos, puede ser porque puede ser la misma regresión lineal, pero con diferentes hiperparámetros, con diferentes tetas y los comparo y voy a escoger aquel que tenga mejor desempeño promedio sobre todos los caforos, sobre todos los grupos. Si es claro no preguntar
+
+Unknown Speaker  28:20  
+esto serviría como para combinar no sé o
+
+Speaker 3  28:25  
+sea como decisiones sí digamos yo parto digamos que quiero hacer un modelo con unas características y otros con otros y aparte quiero partir como La del método
+
+Unknown Speaker  28:40  
+de regularización
+
+Speaker 1  28:48  
+reitero
+
+Speaker 1  29:01  
+propia pero así es que es la forma más segura y Escobar que el que el que tiene mejor rendimiento promedio en los cafos si es claro bueno esto es importante porque esto se va a volver un default ahora yo les pregunto voy a comparar tres modelos listo El modelo un cierto hago los cinco un dos tres cuatro cinco y aquí saco el promedio del error cierto del modelo Un tengo norte modelos modelo dos fue el mejor entonces mejor, entonces selecciono el modelo dos. El modelo dos es una regresión lineal, pues una regresión polinómica de grado dos. Listo, y ese fue mi mejor modelo. Ya sé que ese es el mejor modelo.
+
+Unknown Speaker  30:17  
+Yo entregué cuántos de estos
+
+Speaker 1  30:21  
+cinco siguiéndole esos cinco modelos escojo para utilizarlo en el Mundo Real
+
+Speaker 1  30:49  
+cinco que entrené que tenga más altas métricas
+
+Speaker 1  31:02  
+es mejor que decir que aleatorio. Sí, ahí sí tienes un punto de Bolívar por eso, pero qué mejor estrategia eh recuerden esto me sirve para comparar la capacidad de generalización. ¿Qué modelo generaliza mejor? Generalizó mejor una regresión polinómica de grado dos Aplausi, listo, ya sabe cuál comparó 50.º y el mejor. ¿Con cuál de esos K me quedo? Pues con ninguno. Con ninguno. Yo una vez ya lo tengo, voy a entrenar con todo el conjunto que yo tengo, ya sé cuál es el modelo. Es regresión de grado dos, coja todos los datos y entrene con ese modelo en particular. Si es claro, esto me sirve para comparar modelos, no para entrenarlos. Si es claro, comparo modelos para saber qué modelo generaliza mejor. Y luego que ya sabe cuál es, pues entrena. Eso ¿Qué quiere decir? Si eso es así, quiere decir que para hacer cafall Cross validation yo tengo que coger ese pedacito, cojo este entrenamiento, este pedacito de entrenamiento, es decir, ya hice esa partición y sobre esa partición es la que hago los cafos, las particiones para aplicar la técnica de validación cruzada. Si es claro, escojo cuál es el mejor modelo. Una vez ya sé cuál es el mejor modelo, entreno con todos los datos de entrenamiento y evalúo con el detective
+
+Speaker 1  32:51  
+uno es difícil, es difícil de explicarles modelo un, la otra puede ser un perceptrón multicapa que es una red neuronal, la otra puede ser una CBM, que lo vamos a ver también aquí más adelante. Y el otro puede ser un árbol listo, un decision trip tú coges los datos de entrenamiento, así es el método de validación cruzada y obtienes cuál de estas familias si lo quieres ver, así es mejor de repente tú encuentras que este es mejor. Entonces cada iteración
+
+Unknown Speaker  33:46  
+o
+
+Speaker 4  33:52  
+sea, se dividen los datos de entrenamiento entre esas familias como entre los que voy a
+
+Speaker 1  34:02  
+decidir tengo mis datos en total, voy a dividirlos en entrenamiento y en testing. Tengo aquí los de entrenamiento y tengo aquí unos de testing que no los voy a tocar simplemente para evaluar al final. Ahora cojo los de entrenamiento y voy a hacer a buscar cuál familia es mejor yo podría simplemente entrenarlos con todo cierto y mirar finalmente el desempeño. El problema de de eso ¿Cuál es? Pues el problema de utilizar todos los datos de entrenamiento es que quizás en esta partición en los de entrenamiento que dan los datos fácil listo entonces para una mejor forma de evaluar que también generaliza una familia es partamos este entrenamiento Este es el sitio de entrenamiento no pueden partir supongamos en tres entonces voy a utilizar este para entrenamiento Este para entrenamiento entonces tres de
+
+Unknown Speaker  35:13  
+cada uno
+
+Speaker 1  35:20  
+tres, tres de cada uno. Entonces aquí está el primer modelo de RL, aquí está el segundo modelo de RL y aquí está el tercer modelo de RL de regresión lineal promedio y saco el promedio del error de RL, repito ese proceso con el perceptor multicapa y saco tres modelos también cierto. Y promedio
+
+Unknown Speaker  35:46  
+del error y escojo
+
+Speaker 1  35:51  
+el mejor. Supongamos que este es el mejor que me está diciendo. Eso generaliza mejor los datos del tratamiento en esos tres casos. Ahora, con qué modelo me quedo? Pues realmente está desperdiciando si escoge solo el mejor porque está utilizando solo 2/3 de los datos de entrenamiento. Ya sabe que este generaliza mejor. Coja todos los datos de entrenamiento y entrene un percentro multicapa, sobre todo
+
+Speaker 1  36:28  
+mejor en algunos escenarios donde usted no tiene muchos datos, no tiene muchos datos un régimen bajo de datos para el problema. esto depende del problema. usted mira cuántos 107 ? bueno, depende del problema. lo que hacen es saltarse el testing, lo cual es una mala práctica. Siempre tiene que haber una partición que usted nunca vuelve, vuelve y reentrena con todos los datos de entrenamiento y evalúa y reporta sobre texto. Eso nunca va a cambiar. Bueno, muy bien, hay otra estrategia que se conoce como bootstrapping. ¿Listo para mirar nuevamente la generalización? La capacidad de generalización de un modelo, lo mejor es verlo en una gráfica que aparece acá. Yo tengo datos, todos esos puntos son datos. Lo que voy a hacer es un muestreo y hago un muestreo con reemplazo. ¿Qué significa un muestreo con
+
+Unknown Speaker  37:42  
+reemplazo? Es
+
+Speaker 1  37:48  
+decir, puedo seleccionar más de una vez el mismo a distancia. Listo. Entonces yo puedo coger estos son mis datos de entrenamiento. Y aquí, por ejemplo, escogí dos veces el punto rojo 1 vez el punto azul listo. ¿De qué tamaño son esos subconjuntos? Pues más pequeños que los datos originales. Yo voy a crear cuántos, pues eso es un hiperparámetro. ¿Cuántos subconjuntos va a crear con reemplazo? Depende es lo mismo que la selección de cada anterior. En este caso es un hiperparámetro que cambia en librería, librería usualmente es B ¿Cuántos subconjuntos voy a crear con reemplazo? Listo. Luego de que ya tengo en este caso va a crear tres subconjuntos, calculo el error de cada uno de ellos y lo que va a hacer es promediarlos, igual que hicimos acá se promedia y voy a encontrar esto es interesante, se los voy a dejar para los curiosos. Si usted hace bootstrapping cierto, y hace de modelos, entrena el modelo con estos subconjuntos, obtiene el error. Ese error se va a comportar de mal como una normal listo con media Bueno, no necesariamente media cero, pero sí como una campana de gauss y de hecho uno puede hacer una prueba muy interesante y es que el promedio de cada muestra ya Cada vez que saque un dataset contiene
+
+Unknown Speaker  39:34  
+aproximadamente estrategia
+
+Speaker 1  39:42  
+ensamblada entonces sí, la respuesta es sí, pero eso no me gustaría. Sí.
+
+Speaker 1  40:14  
+Como estoy repitiendo datos, eventualmente va a aumentar la colonialidad, pero lo que creo que lo suficiente como para que en la media del error afecte la serie selección. Pero es una buen dato hacer una gráfica que lo demuestre, pero eso también puede ocurrir en cuando hay hartas muestras. Es una gráfica interesante. De hecho, ustedes pueden hacer ahorita un laboratorio, pero yo también lo
+
+Speaker 1  41:12  
+voy a hacer. Mi intuición es que no afecta en la media, pero igual hay que probarlo.
+
+Unknown Speaker  41:20  
+Bueno, esto va a
+
+Speaker 1  41:22  
+ser un repaso tengo un conjunto de datos, voy a seleccionar voy a construir un nuevo conjunto de datos haciendo posteo con reemplazo del mismo tamaño del original se pueden repetir en este caso muestras calculo el error para acá entreno el modelo con este dataset nuevo calculo el error cojo este calculo el entreno, calculo el error, cojo este entreno, calculo el error promedio y ya tengo para uno de esos, tengo ya el error promedio, lo hago para todos los modelos que quiero comparar y selecciono aquel modelo que tengo mejor error promedio y eso pues ya es el proceso natural, ya Después ustedes lo entrenan el proceso natural
+
+Speaker 1  42:23  
+laboratorios prácticos. Es bastante sencilla a mi parecer, pero muestra gráficamente todos los conceptos que hemos visto acá, pues para que por favor la revisen
+
+Unknown Speaker  42:38  
+y la hagan ahí preguntas para
+
+Speaker 1  42:51  
+hacer para que el resto del que queda hasta el siguiente lunes, que
+
+Unknown Speaker  42:58  
+es el objetivo Número uno,
+
+Unknown Speaker  44:00  
+yo creo que
+
+Unknown Speaker  44:12  
+de hecho está mal Desde El comienzo.
+
+Unknown Speaker  45:09  
+Hiciste imputación,
+
+Speaker 1  45:15  
+bueno, tú hiciste imputación de B basado en a y eliminaste a
+
+Unknown Speaker  45:31  
+eliminar otra vez tienes aire, entonces tienes alta correlación
+
+Unknown Speaker  47:00  
+bañarnos ser utilice
+
+Unknown Speaker  47:17  
+acá abierto
+
+Unknown Speaker  47:33  
+Entre más pequeño, mejor
+
+Speaker 1  47:57  
+multicoler modelos de 110 . ahí volvemos sobre ese tema pero no lo tuvimos en este curso. Hay métodos para hacer los modelos chiquitos y se llama se llama método en particular se llama método de poda y hay otro que es reducir o sea todos los valores normalmente tienen se comportan como esa zona de causa cierto que eliminar las
+
+Unknown Speaker  48:28  
+colas de la distribución
+
+Speaker 1  48:53  
+neuronales se hace yo pago que literalmente manda los parámetros
+
+Speaker 1  49:10  
+complejidad de distribución de los parámetros se mochan y se queda uno con los que están más cercanos
+
+Unknown Speaker  53:54  
+receso
+
+Transcribed by https://otter.ai

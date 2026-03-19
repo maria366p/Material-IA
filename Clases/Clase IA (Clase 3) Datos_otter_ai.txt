@@ -1,0 +1,220 @@
+Unknown Speaker  0:00  
+Ustedes sabían que Tenemos Un pequeño
+
+Unknown Speaker  2:02  
+pero Gracias
+
+Speaker 1  3:00  
+chicos, vamos a hacerlo en una práctica. Entonces los que no crearon computador pueden ir cogiendo
+
+Unknown Speaker  4:49  
+secciones
+
+Speaker 2  4:59  
+Entre esas el repositorios que pueden
+
+Unknown Speaker  5:17  
+comer en su mayoría
+
+Unknown Speaker  5:38  
+mayoría perfecto
+
+Speaker 1  5:43  
+hacemos la parte teórica por favor vayan descargando las prácticas que también como es la primera lo puse también en el curso en nuestra sección, ustedes pueden ver ahí también que hay prácticas y laboratorios y la pueden descargar pero no es a través del repo entonces es bueno que tengan el acceso a en esta
+
+Speaker 2  6:15  
+sesión la sesión de hoy vamos a Hablar de conjuntos de datos, vamos a reforzar algunos conceptos importantes
+
+Unknown Speaker  6:27  
+en relación a los datos
+
+Speaker 2  6:30  
+y los tipos de datos, así como los tipos de conjuntos de datos. Luego vamos a hablar un poquito de del ciclo de vida de la exploración de los datos Como primer paso que de hecho es el tal
+
+Speaker 2  6:52  
+reitero un pequeño ejemplo y el taller de exploración de datos que si no lo acaban hoy, pues lo pueden hacer finalmente en sus tranquilidad en sus casas porque lo retomamos y lo vemos desde el punto de vista teórico.
+
+Unknown Speaker  7:16  
+La próxima clase ya
+
+Speaker 2  7:18  
+ustedes habiéndolo finalizado, el corrido ya se acabó en sus lo primero que tenemos que definir es un concepto que seguramente es familiar ya para muchos que es el contexto el concepto es característico es una propiedad un atributo o una variable medible que hay que ser medible para poderlo, para poder construir un set de datos y se utiliza como entrada una combinación de ellas. No solamente una característica, pueden ser múltiples, pero todas de ellas medibles y es lo que finalmente usamos como entrada para los algoritmos de aprendizaje. Listo, entonces cada característica se representa Finalmente, ustedes lo pueden ver por ahora como una columna en un dataset de entrenamiento. Yo tengo un conjunto de características acá, por ejemplo, para determinar el precio de una vivienda, tamaño en metros cuadrados, habitaciones, ubicación, ¿qué más características podría tener para predecir el precio
+
+Unknown Speaker  8:29  
+de una vivienda,
+
+Unknown Speaker  8:35  
+el estrato, ¿Cuántos
+
+Unknown Speaker  8:40  
+baños en
+
+Speaker 2  8:49  
+China la variable que más determina el precio de la vivienda es el número de baños. No es el área. Usted puede tener 80 m pero tiene cuatro baños en los 80 m y vale más pues cuando aprendamos a hacer análisis de características
+
+Unknown Speaker  9:12  
+necesito para este problema
+
+Speaker 2  9:30  
+respuesta es no sé, esa es la respuesta. Vamos a tener que evaluar diferentes combinaciones, manipulación de esas características, construir diversos modelos, evaluarlos de una forma rigurosa para determinar el mejor conjunto de características. Hay un principio que sí debe gobernar los modelos de machine learning, que es el principio de la navaja de oro. No sé si ustedes algún momento habían escuchado desde el principio si yo tengo tres modelos que tiene exactamente el mismo performance, el mismo rendimiento, el mismo lo evaluamos y tenemos exactamente el mismo resultado de venta. ¿Cuál de los tres modelos escojo si son exactamente iguales en términos de la evaluación? El menos complejo, el más simple y la simplicidad se ve en términos de dos cosas, particularmente los modelos de Machine Learn el número de parámetros que todavía no sabemos qué es eso, pero lo vamos a entender más adelante que tiene ese modelo y segundo, la complejidad de detector de características de entrada. Listo, esas son las dos con las cuales vamos a decir qué tan complejo no es en comparación a otro. Acá ustedes pueden y me escucharon decir un vector de características va a ser muy común que yo mencione eso si ustedes ven este es un ejemplo y ese ejemplo tiene un vector de características son tres dimensiones tamaño habitaciones y ubicación y a eso usualmente pues algo que no estoy muy de acuerdo. Usted me va a decir por qué? Tal vez esto no tiene mucho sentido, pero uno lo encuentra en la literatura. A estas características las llaman variables independientes y a ley vuelvo a la etiqueta en este caso, el precio es una tarea de regresión aprendizaje supervisado. Esa es la señal de supervisión la llaman la variable dependiente. Entonces esta es la que depende de estas en teoría, si es claro, es otra forma de nombrarlo. Yo no estoy muy de acuerdo y no me van a escuchar muy frecuentemente decir cuáles son sus variables independientes yo voy a decir cuáles son sus características por qué por qué creen que quizás si ese nombre es confuso
+
+Speaker 3  11:55  
+porque pronto entre independientes pues dependen entre no sé supongo yo que sí aumento el tamaño probablemente no
+
+Speaker 2  12:04  
+lo es. Hay correlaciones entre las características y eso de hecho lo vamos a ver cuando ustedes hagan el análisis exploratorio de los datos. Si ustedes ven que hay dos variables que tienen una alta correlación, es decir, cuando aumenta una en tanto la otra aumenta muy similar en la misma proporción. Quiere decir que quizás usted tenga características redundantes, es decir, está repitiendo la misma característica y está aumentando en consecuencia, la complejidad de su modelamiento. Si es claro, igual ustedes lo van a interpretar como variables independientes en términos de la predicción, así es como lo presentan las literaturas. Pero el nombre reitero es puede ser confuso cuando uno hace análisis exploratorio de datos. Bueno, entonces ejemplos clasificación de clientes bancarios? ¿Qué características necesito? Edad, ingresos mensuales, historial crediticio, número de productos contratados. Quiero diagnosticar hipertensión un sistema que automáticamente me diga ay ya usted tiene una alta probabilidad el nivel de glucosa, la edad del paciente, el género, resultados, otros resultados de análisis de sangre seguramente mucha más información de lo que aparece acá. Si quiero detectar fraude en trata en transacciones pues necesito cierto verdad de aprendizaje supervisado. Una de las aplicaciones de aprendizaje no supervisado es detección de anomalías como transacciones fraudulentas. Entonces necesito el monto de la transacción, la hora del día, ubicación del comercio, etcétera. Muy probablemente, si usted hace una transacción a las 2:00 a.m. Por un monto que es muy grande superior a lo que usted normalmente hace, pues seguramente eso lo va a detectar como una anomalía. Seguramente, pues se va a tratar listo. Bien, entonces muy importante acá mencionar que hay diferentes tipos de datos, es decir, yo estoy acá suponiendo en muchas oportunidades que estamos hablando de datos que son de tipo tabular. Ya les voy a explicar con la diferencia. Yo puedo tener acá datos que provienen de esquemas relacionales, texto que es no estructurado, puedo tener resultados de búsqueda del navegador, puedo tener imágenes como en este caso puedo tener audio, puedo tener señales en tiempo continuo. El tipo de dato de entrada pues importa finalmente no, pero todo eso, independientemente de la tipología del dato, lo tengo que transformar en un vector de características. Si es claro, sea imagen, sea texto, sea no estructurado, lo tengo que traducir a un conjunto de atributos que en la mayoría de los casos va a tener un significado explícito en otros no tanto ya no está directamente relacionado con la semántica que me está dando el texto o la imagen sino con ciertas propiedades del mismo ya les voy a hablar un poquito de eso entonces al final sea el tipo de dato que los tipos de datos que ustedes manejan va a tener usted que construir un dataset que va a tener en las filas lo que se conoce como instancias ejemplos que son vectores de características cierto norte dimensionales Estos son otros nombres que ustedes van a encontrar literatura para esa fila y va a tener adicionalmente como columnas atributos variadores ejemplos con su respectiva señal de supervisión en caso de aprendizaje supervisado y cada columna Con pues representa un atributo que puede tener un significado directo con la semántica del dato no en qué caso no pues vamos a saltar un poquito por ejemplo las imágenes no las imágenes no tienen una estructura naturalmente tabular no la tienen pero transmiten una semántica incluso mucho mayor que es una tabla su información es del mundo visual y transmiten muchísima más información que el mundo textual incluso y por supuesto que el mundo tabular donde el tabular estoy hablando de sistemas transaccionales, finalmente cuando yo tengo que transformar una imagen cierto pues yo puedo utilizar un tipa que es básicamente suponer que son pinceles o blancos o negros aquí hay un corazoncito cierto y mi vector de características yo puedo coger esto y aplanarlo y que ese sea mi vector de características de la imagen. Entonces yo puedo hacer aquí aplanar esa imagen en blanco y negro y lo vuelvo. Un vector de características ya cumple finalmente con lo que acabamos de decir. Tengo un vector que es una instancia y yo digo, ah, OK, hay un lago? No hay un lago, esa es la señal de supervisión lo que tengo que categorizar en este hipotético ejemplo y ya tengo un vector de características, pero si yo les digo esto que semántica tiene que me pueden decir esta posición del vector este atributo es un 111 . supongan la escala de grises que va de cero a 211 11 respecto a la semántica de la imagen no dice mucho cierto no dice mucho o sea bueno eso es un pixel dentro del bosque quizás sí pero per se no necesariamente el atributo representa un valor semántico si es claro pero si de la estructura de la imagen en este caso por eso es que es más desafiante los datos no estructurados listo como las imágenes y el texto mucho más desafiante que los datos tabulares porque su semántica no está explícita en el valor que los represente. Ahorita volvemos al tema de las imágenes bueno entonces tipos de datos conjuntos de datos y su representación diferentes orígenes pueden ser sistemas transaccionales Todos aquí ya vieron bases de datos y entonces saben que es un modelo antiderelación y y pues saben que esos son datos tabulares. Una entidad dentro de una tabla tiene un conjunto de características que son las columnas de esa tabla. También pueden ser bodegas de datos. Eso es otro término que se le da a una base de datos que es grande. Realmente eso no tiene más ciencia. Las redes sociales. Las redes sociales si yo saco información de la red social, puedo sacar información de relaciones entre entidades. Es esa red social personas cierto, así como información que publica la misma persona es de diferente naturaleza. Hay información textual, hay información de red el tipo de grafo también pues diferentes tipos de almacenamiento. Yo puedo operar en diferentes orígenes con diferentes estructuras de almacenamiento. Por ejemplo, la red social yo podría tener una base de datos de un grafo que sería lo natural o podría tener una combinación de un grafo con una no SQL con una base de datos no secuelas ustedes les enseñan no SQL entonces ya saben que es no SQL cierto base de datos documentales o puede ser la clásica modelos relacionales o quizás esta si no la han escuchado pues la vamos a trabajar al final de la clase modelos vectoriales, bases de datos vectoriales. ¿Alguien sabe qué es una base de datos vectoriales? Su nombre sugiere que casi cuatro vectores. ¿y por qué los vectores son importantes en machine learning? Todo acá se acuerdan? Yo les dije todos los atributos yo voy a decir ah este es el vector de características de este ejemplo es un vector norte dimensional donde cada dimensión es un atributo. Volviendo al ejemplo de la casa, esto era un vector tengo dos ejemplos cada uno es un vector esto es un vector de características de tamaño tres de tres dimensiones y pues si yo aquí solamente voy a hacer una un cambiecito suponga que la ubicación está cualificada con un número ya tengo un vector numérico y yo puedo operar matemáticamente ese vector numérico y puedo hacer operaciones que vamos a ver más adelante de similitudes de vectores que facilitan muchas operaciones en los modelos de aprendizaje macro, es decir, es natural tener una representación distancias vectorial de números y las bases de datos vectoriales ya existían, sino como muchas cosas En tecnología como cuando se necesitan mucho para vender los productos.
+
+Unknown Speaker  21:28  
+Le ponen nombres
+
+Speaker 2  21:40  
+diferentes también pues es importante conocer
+
+Unknown Speaker  21:50  
+el origen,
+
+Speaker 2  21:54  
+finalmente la forma de almacenamiento de almacenamiento de los datos, porque eso importa bastante. Al final, usted tiene que sacar la información y ponerla en un formato pues que sea consumible y datos que sean procesables. Por su modelo de machine learning se negó a seguir funcionando bien los datos tabulares son los que tienen un esquema asociado. Entonces ustedes ya saben de bases de datos por detrás hay un esquema que lo soporta y ese esquema finalmente pues le da información adicional denominada metadata a cada una de las filas que usted está viendo cada columna de ese esquema yo puedo decir que los atributos pueden ser de tipo cualitativo, categóricos
+
+Unknown Speaker  22:56  
+o cuantitativos. Aquí está Marco.
+
+Speaker 2  22:59  
+Entonces dentro de los cualitativos son categóricos, pues tenemos los nominales y los ordinales. Nominales no tienen un orden específico. Por ejemplo, una categoría puede ser un color, una categoría, bueno, puede ser un género, por ejemplo masculino, femenino y ordinales es donde yo ya puedo parte de la información que me da categórica me da cierto grado de orden pequeño mediano grande por ejemplo su semestre podría verse también como una categoría en qué semestre usted está cierto el nivel educativo primaria secundaria universidad me da una información adicional respecto al orden listo y en los que son cualitativos pueden haber discretos o continuos listo la forma más fácil de identificarlos es si toman valores que son netamente enteros, los puedo nominar discretos. Por ejemplo, el número de hijos uno no tiene dos puntos cinco hijos. Bueno, me acordé de un amigo que dice que el perro es como medio hijo. Entonces en el mundo pues de las características completas y bien definidas número de hijos pues tiene que ser un número entero cierto aquí la cantidad de productos comprados la edad bueno la edad yo puedo verlo también como número entero un número no entero pero bueno en general uno son medidas que cuantifican finalmente valores completos y continuos donde pueden tener realmente un rango cierto, incluyendo decimales, la estatura, el peso, el tiempo, etc. Eso me puedo encontrar que cada tributo, cada característica de una instancia puede ser de diferentes tipologías. Listo. Hay algoritmos de machine learning que no son capaces de operar si no son numéricos, si no son atributos numéricos, hay otros algoritmos de machine learning que son un poquito más laxos que pueden operar en el mundo cualitativo. Listo. Pero afortunadamente pues eso no es un problema. Si yo tengo un algoritmo que solo puede operar en atributos cuantitativos, que puedo hacer
+
+Unknown Speaker  25:13  
+si de repente sale un nominal,
+
+Speaker 2  25:18  
+codificarlos es lo más sencillo. Bueno, de hecho vamos a ver también unos un algoritmo que se llama árboles de decisión. Y esos algoritmos en particular no son capaces de operar en datos. Bueno, una de sus implementaciones no es capaz de operar en datos cuantitativos si operar
+
+Speaker 2  25:50  
+en datos cuantitativos vamos a ver dependiendo. Por eso importa saber y entender muy bien los datos, porque una vez uno los entiende, uno puede hacer transformaciones de esos datos para que puedan ser consumidos por el algoritmo particular que usted está tratando de utilizar lo que quiere evaluar. Bueno, entonces volvamos otra vez al tema de las imágenes. Las imágenes no son tabulares y son datos no estructurados. No siguen una estructura definida como los datos tabulares. No hay un esquema. Sin embargo, la información que transmite una imagen es mucho más amplia que la información que transmite una instancia tabular. Listo. Por eso es que mucho del mundo de inteligencia artificial se ha trasladado al mundo de la visión y a entender el mundo pues espacial donde nosotros nos movemos, porque uno aprende mucho más rápido en el mundo espacial porque consume mucha más información que un niño de cinco años consume y la cantidad de información que ha consumido en la humanidad es Internet, y eso es lo que ha consumido
+
+Speaker 2  27:39  
+humanidades estoy hablando de modelos multimodales. Entonces la información textual transmite menos información que el mundo visual. Por eso es que pues se aprende mucho más rápido el mundo visual, pero también es muchísimo más desafiante aprender del mundo visual. Sacar todas las semánticas de las imágenes, no es un proceso sencillo alguien que sepa el dominio tiene y saca más semántica de esa información. No si le pregunto a un médico a decir ay aquí se ven claramente los $38 que tiene una mano. Bueno, tiene mucha semántica la información que es visual del mundo visual, pues nos transmite mucha más información. Y eso es un problema porque nuevamente les decía ¿Cómo transformo esto en características? No ¿Cómo transformo eso finalmente un conjunto de características para que sea consumido por un algoritmo de él no resulta. Y pasa que eso es complicado, no es sencillo, y nos tenemos que ir a representaciones de bajo nivel para las imágenes y también en muchos casos para el test. ¿Qué quiere decir? Pues cómo la representamos digital de representando diversos niveles de grises de grises y esos numeritos es lo que voy a utilizar como características. Si estoy ya en imágenes a color, las imágenes a color son la combinación de tres matrices. Una, bueno, depende, pero en general las más comunes son las representaciones RGB, que son tres matrices de rojo, de verde y de azul. Son tres matrices que combinadas. Si usted las combina, es lo que le da finalmente toda la gama de colores, finalmente la imagen. Cierto, eso ya lo sabía. Entonces tengo tres matrices que realmente detrás representan la imagen. Son matrices de números. Bien, y algo que es importante que vamos a estar introduciendo gradualmente son representación. Bueno, aquí esto es 520 por 400 es el ancho por el alto 3 es decir que son tres matrices. Esto es lo que se conoce como una representación. Son las dimensiones de una representación vectorial en un espacio multidimensional. Hay tres dimensiones que representan esta imagen, el ancho, el alto y las tres matrices que corresponden a RGB. Porque eso es importante porque estos números son importantes son importantes porque vamos a ver cuando ustedes utilicen las librerías que las librerías utilizan pues representaciones vectoriales y las representaciones vectoriales una forma de hacerle seguimiento a que todo está correcto es a través de las dimensiones o los tamaños entonces vamos a añadirle más adelante una nueva dimensión para especificar cuántas imágenes. Aquí solo represento una entonces voy a agregar una cuarta dimensión para decirle, oiga, tengo 1000 imágenes y vamos a ir pues familiarizándonos poco a poco con esas representaciones de tamaño vectorial. En eso tiene que ver con algo que se llaman tensores. Después vamos a un tensores un vector otra forma de ser un vector quizás es un poco más computacional y vamos a ir poco a poco no se preocupen hoy como agregando pequeñas miradas de información que después van a ser importantes, pero por ahora está bien listo. El caso es que eso no es una fila como las que vivimos para poder ser alimentado por algo de un buen machine learning. Lo que se hace típicamente es aplanarlo. Listo. Si es esto una matriz de 11 por 11 , pues pongo una fila detrás de otra fila y convierto eso en un vector de 121 posiciones. Y eso es lo que le entra a mi algoritmo de machine learning para decir si hay un lago, no hay un lago. Es decir, ah, como lo mencionamos hace un momento, el problema es que esa representación, por supuesto, es limitada porque hacer esto no está tan bien.
+
+Speaker 3  32:22  
+Si se me ocurre que no le estamos especificando cuáles son las dimensiones de la imagen. Entonces, de pronto no diferencie entre una imagen que sea como así súper horizontal a un cuadrado, es un problema. Se está
+
+Speaker 2  32:40  
+perdiendo la información espacial de la imagen que puede ser muy relevante para muchos problemas. Por ejemplo, para detección de enfermedad. Si yo tengo ahí los pulmones y yo sé que es más probable que aparezcan tumores en la parte superior al tronco y mirar pues si sé que allá en esa posición es más probable pues esa información de la posición se va a perder en un vector la información espacial se pierde sin embargo pues es una estrategia para aplicar finalmente la lógica que hemos venido hablando de preparación de datos vector de características ley si es claro bueno después Vamos a ver cuando entremos a deep learning, que hay mejores cosas que hacer que construir vectores para las imágenes. ¿Qué tal si yo analizo fragmentos de la imagen de forma automática a través de filtros? Y eso lo vamos a ver más adelante, pero por ahora estamos en el universo de vector de características para poder construir nuestro dataset que con las imágenes que son a color que tienen tres canales pues cada canal lo aplano cierto y con cateo los tres vectores de las tres matrices peor aún no solo estoy perdiendo información espacial en una dimensión sino en las tres dimensiones de representación de la imagen, pero es una forma y funciona para muchos problemas, sobre todo aquellos que no son tan dependientes a la distribución espacial para detectar cosas en imágenes. Bien, eso es información estructural. ¿Qué pasa con el texto? También es no estructurado como yo pongo el texto en un vector de características no y formación textual hay muchísimas medios digitales, publicaciones de redes sociales, reseñas, documentos, páginas web. ¿Cómo hago para transformar un texto en un vector de características? Pues la forma más sencilla es transformar y antes de que se vuelva a apagar el coso este en un vector de presencia ausencia de palabras cierto entonces por ejemplo quiero transformar este texto en un vector entonces defino un vocabulario que es un universo posible de palabras cierto que van a ser todas las características Esta es por ejemplo la característica si aparece uno aparece la palabra amor en el texto, entonces acá no aparece entonces un cero. La siguiente característica es si aparece, por ejemplo la palabra la cierto una stop por va a aparecer seguramente en un documento en español y aparece 10 veces. Entonces pongo un 10 . Presencia o ausencia de una palabra va a ser la característica que va representando el texto. Si es claro, qué problema tiene esto después ustedes lo van a vivir en los laboratorios. Pero ¿Qué problema tiene esta representación para un
+
+Speaker 2  35:42  
+texto de la sí, ese es un problema. Vamos a tener que ponderarlas, pero hay más problemas,
+
+Speaker 3  35:50  
+más problemas. No conozco precesores ni sucesores.
+
+Speaker 2  35:56  
+Se va a perder el orden de las palabras. Cierto yo y resulta que el lenguaje si yo quiero entender el lenguaje para pensar en lo que viene después de una parte un conjunto de palabras importante saber lo que ha ocurrido antes si yo digo este estudiante es muy qué palabra tiene una alta probabilidad que ocurra después pilo por ejemplo bien pero no Estados Unidos hay unas palabras que van a tener más probabilidad según lo que ocurrió antes. Es decir, la secuencia importa, el orden de las palabras importa en esta representación se pierde adicionalmente lo que dice el compañero, las palabras más que son más frecuentes que son de estructura cierto son de la gramática para que se formen oraciones bien que no aportan semántica los determinantes dale con bueno todos esos que nos enseñaron bachillerato no aportan información altamente semántica y son los más frecuentes no entonces esta representación pues es un world around para tratar de representar vectorialmente el texto pero vamos a tener que realmente mejorar pero en últimas tengo un vector de características si es claro y en este por lo menos en las imágenes cada uno es un pixel acá por lo menos sé que representa que tiene una palabra Bueno entonces esta es un poquito mejor que las imágenes, pero sigue teniendo bastantes problemas. Hasta aquí. Alguna pregunta conclusiones de esta mini excepción necesito para un dataset para poder utilizar algoritmos de machine learning. Un dataset que tiene por cada instancia un conjunto de atributos que lo denominamos un vector de característica y adicionalmente la señal de supervisión. Si estoy en aprendizaje supervisado que puede ser una categoría lo que quiero predecir si no está en aprendizaje supervisado pues simplemente el vector. ¿Hay alguna pregunta? Acá es el momento de preguntar si no es claro para ustedes bien listo bueno ahora vamos a hablar de sesgos en estos datos porque a partir de este laboratorio pues les vamos a entregar los datos pero muchos problemas ustedes van a tener que ir a la fuente y extraer esos datos bueno Entonces ¿Qué tipos de sesgo hay cuando usted va a armar su data cero? Hay dos que tienen que ver son muy similares. El impacto y el trato es igual. Cierto, el impacto es igual. Es cuando no se excluye explícitamente un atributo para separar poblaciones que pueden ser necesariamente atributos o poblaciones humanas, grupos sociales pueden ser asociados precisamente al problema bajo el tubo. Pero es fácil interpretar el sesgo cuando uno lo asocia a una población social. Si yo estoy haciendo una clasificación de esto sucedió en Estados Unidos había un sistema que clasificaba a las personas cuál tan probable era que cometieran un crimen y utilizar una base de datos histórica de todas las personas que han estado en la cárcel. Y esto es un reporte real y es bien curioso. Qué creen que pasó sin ser no hay que ser adivino para darse cuenta cuál es el problema de eso? Sí, pues la mayor parte de cada 10 personas en ese momento, cuando hicieron estaban en la cárcel de cada 10 personas de Estados Unidos, siete eran personas afrodescendientes. Y entonces entonces pues cuando entrenaron el modelo, si usted era afro, si era negrito, pues tenía ya un chance mayor de que el modelo a pesar de que usted no tuviera ejemplos típicos
+
+Unknown Speaker  40:06  
+raza, sexo,
+
+Speaker 2  40:10  
+edad, religión, pero se puede aplicar a otro tipo de cosas. Por ejemplo, si usted está tratando de clasificar cuánto en cuántos kilómetros un carro dependiendo de su marca, falla de su modelo, pues si usted quiere finalmente poder abarcar toda la amplia gama de carros de marcas de carros que hay, tiene que incluirlas a todas. Bueno, ahora suponga que usted tiene los datos y que lo que hace es pretendido o sea por voluntad propia no incluirlo ahí ya no es impacto es igual sino pasa lo otro que es trato desigual listo entonces usted puede omitir o incluir una feature que puede ser o generar un desbalance, por ejemplo en las predicciones que está haciendo ya cuando no es que no existan los datos sino es que usted de forma voluntaria lo omite Bien entonces eso también es un problema también está hay otros por acá en particular nos interesa el de muestra cierto y es cuando usted tiene ejemplos pero no todos son iguales no tiene el mismo la misma cantidad de ejemplo les voy a poner por acá un proyecto real cierto de Celso de muestra donde precisamente los datos de entrenamiento no son representativos de la población a la que se expone. Finalmente debe servir. Bueno, no funciona bien con datos reales, pero con los datos de entrenamiento funciona muy bien y, por supuesto, conduce a resultados problemáticos. Esto fue la época del covid. Esto es un proyecto de la profesora heidimar Núñez, que era detección del uso correcto del tapabocas a partir de imágenes. Y entonces en esa época se necesitaban estos modelos para, no sé, construir estos modelos de forma masiva para detectarlo con cámaras y también detectores de temperatura de corporal para detectar personas que tenían fiebre de forma automática. Pero aquí no estamos entrando en detección de máscaras. Entonces habían tres categorías. Si usted estaba tenía bien puesta su máscara, pues bien era lo que quería predecir. Si usted no la tenía cubriendo boca y nariz, es un uso incorrecto. Y si usted no estaba finalmente usándola, pues es una tercera categoría que no se usa. ¿Qué tipo de aprendizaje es supervisado? Tres categorías. La señal de supervisión son estas tres clases uso correcto incorrecto y no usa ¿Con qué datos se entrena? Pues con fotografías de personas de su cara utilizando pues bien el tapabocas utilizándolo pero de forma incorrecta y sin utilizarlo se necesitan datos de las tres poblaciones y lo mejor que uno podría hacer es tener de la de cada categoría la misma cantidad de ejemplos de entrenamiento. Listo, yo creo que en este escenario y en este problema particular, recolectar los datos no era tan difícil, creo yo. Entonces, ¿qué opinan? Usted le puede tomar foto a usted, a su familia para ellos la autorización, pero no era complicado. Es decir, uno podría simular los diferentes escenarios. Si me hago entender. Entonces, bueno, eso es una tarea que en el área de visión se llama detención de objetos y cierto y utilizaron los siguientes datos listo se utilizaron cinco repositorios públicos cinco fuentes diferentes en particular muchos asiáticos ya vamos a ver la distribución cierto y se separó por supuesto como lo vimos la primera clase, pues del conjunto de datos, un conjunto de datos de entrenamiento y otros para prueba. Se prepararon los datos, se eliminaron los datos que tenían ruido, es decir, una persona revisó y si la persona no era capaz de identificar el humano, no era capaz de identificar qué categoría es la eliminaba. Hizo una revisión finalmente Humana para garantizar que era capaz de identificar el dable correcto listo y también hicieron aumentación de imágenes. Eso también lo vamos a ver más adelante que es aumentar la imagen es hacerle pequeñas transformaciones como giros finalmente hacerle cambio en los canales de color ligeramente cierto aumentar el conjunto de datos, también recortes a la imagen. Todo eso es aumentación y lo vamos a ver más adelante. Bien, hicieron una red neuronal con una arquitectura que se llama Mobile Net. Después la vamos a ver. Movilet es una arquitectura liviana que puede operar en sus celulares. Y la representación de las imágenes era la representación vectorial que acabamos de ver. No era nada finalmente del otro mundo. Bien, y acá ustedes ven un tema que era un demo real. Ustedes no estaban en la universidad para el covid, pero entonces tenían ese modelo corriendo en algunas cámaras a la central
+
+Unknown Speaker  46:00  
+de los edificios o
+
+Speaker 2  46:07  
+entonces aquí hay unos score de evaluación. No hemos visto métricas de evaluación, pero aquí lo que ustedes tienen que ver es el soporte es cuántos ejemplos. Entonces aquí están las tres clases, aquí está el soporte y esto es el F un score. Interprétenlo como una medida entre cero 1 después vamos a ver en detalle. Es una combinación de la precisión del recall de clase y entre más alta mejor sea perfecto. Es un entonces la máscara correctamente expuesta cero. 96 bien dos clases
+
+Unknown Speaker  46:49  
+y la otra
+
+Speaker 2  46:53  
+clase no está tan bien 1 se preguntará bueno ¿Qué pasó no y para eso se necesita la otra columna de soporte donde pues me dice cuántos ejemplos había de cada clase finalmente en el conjunto de testing, pero esa misma cantidad se refleja en el conjunto de entrenamiento porque cuando uno hace la partición se hace la partición estratificada, es decir, se mantienen las mismas relaciones de entrenamiento y testing y pues básicamente el volumen de datos de cuando la máscara no está bien puesta en el conjunto de entrenamiento no es representativo. Adicionalmente, había un desbalance también en el conjunto de entrenamiento que no funcionaba tan bien para población colombiana. Aquí funciona pero no funcionaba bien para colombianos, tenía un f un score macro, ya después van a entender qué es eso es una métrica del 78 % . listo. pero ustedes vieron la tablita antes de que se apagara nuevamente que estaban asiáticos, blancos y nen no había en la base de datos de entrenamiento datos de la población hoy por hoy
+
+Speaker 2  48:21  
+hoy por hoy los lineamientos, por ejemplo, de la Unión Europea para el desarrollo de herramientas penalizan eso. O sea, su empresa, si usted hace una empresa de guía, usted tiene que tener un model camps 1 data Cam que representa esto. Y si hay un desbalance extremo, lo tiene que especificar al usuario. Por ejemplo, en este caso, si esto lo liberan esto lo entregamos con colombianos, con norteamericanos, pero no con asiáticos. No funciona. Listo. Un caso crítico también de Canon, la compañía de de cámaras fotográficas, donde ustedes ya saben que le detecta uno la cara y detecta cuando las personas ríen se han visto y que automáticamente toma la foto. Bueno, funcionaba muy bien para esta parte del mundo, pero con los asiáticos no detectaba que sonreía, no hacía la detección. Entonces se ganó una demanda
+
+Unknown Speaker  49:26  
+por sesgo de muestra básicamente
+
+Speaker 2  49:30  
+entonces esto tiene un impacto y es importante. Les voy a pedir el favor para la siguiente clase. O lo pueden hacer ahí ahorita que empecemos el taller. Ustedes pueden hacer este por favor. Es un ejemplo de sesgo de muestra para la próxima clase. Ya lo tienen que traer porque se demoran como 5 min . Listo, entonces es un poquito largo, pues lo hacen es un jueguito ahí muy simple. Y me cuentan de qué trataba el juego y cuál fue el resultado que ustedes obtuvieron? Listo, bueno, entender cuál es el problema. Una vez ya tengo entiendo
+
+Unknown Speaker  50:17  
+el problema
+
+Speaker 2  50:20  
+una vez ya tengo entiendo el problema, hago el proceso de recolección de datos, que puede ir a diferentes tipos de fuentes que tengo disponibles. Por supuesto, aquí tienen que analizar aspectos legales, por eso es que nosotros les vamos a suministrar en casi todos los datos porque ya hicimos este análisis y también anonimizamos si es necesario. Y luego viene una fase de exploración de los datos, de entender qué tipos de datos son los que hay en esa base de datos, de hacer unas estadísticas descriptivas básicas en caso que sean datos cuantitativos, la distribución, la media, la desviación estándar, un análisis de correlación con otros datos numéricos para saber si hay cosas irrelevantes. De eso vamos a hablar después de que lo haga. Y luego que ya hago esa exploración de los datos, pues yo ya me imagino oiga, ya tengo una buena idea de qué es lo que tengo 1 tiene que analizar si con esos datos puede resolver problemas. Muchas veces la respuesta es no y hay que volverse a hacer recolección de datos o mejorar los procesos de de digitalización de las organizaciones. Les cuento una cosa una vez una el consejo superior un área judicial aquí en Colombia llegó con un proyecto muy interesante de hacer análisis automático de sentencias. Eso fue hace como los dos años y medio y pues muy contentos a hacerlo con la universidad hacer modelos precisamente para utilizando esa información que ellos han recopilado por años, pero esos datos estaban en físico y pues nosotros no necesita un proyecto previo de digitalización que permita parte que hacer poseer para extraer y eso es un cabello extraer finalmente los datos a la fecha eso fue hace tres años ya en tres años todavía sigue por lo menos los nuevos que ya van llegando ya se digitaliza, pero los viejos todavía no han acabado finalmente de digitalizar es un proceso largo y tedioso, pero se necesita pues previo a hacer cualquier modelo machine. Entonces, muchas veces la respuesta es no lo puedo hacer en este momento. Tengo que hacer un proceso de recolección, mejorar ciertas cosas dentro de mi organización para poder capturar esos datos. Bueno, que lo vamos a ver pues a partir de la próxima clase, ¿cómo mejoro los datos existentes y cómo hago ingeniería de características para que veamos ya pudieron descargar? No listo, por favor. Entonces estas son las preguntas que ustedes van a responder. Pero por supuesto, los ingenieros nos gusta más a nivel de código todas estas ¿Cuáles son los valores de cada una de las variables? ¿Cuáles son sus estadísticas básicas? Hay datos duplicados? La frecuencia de esos datos dependiendo si es que al final, si es cualitativo, cuantitativo, pues si hay variables duplicadas, si hay variables ausentes, Si hay variables también
+
+Speaker 2  53:51  
+es para que se les piden ahí también es para que se familiaricen. No todos acá necesariamente han trabajado extensivamente con pandas y con otras librerías de EML también. Ese es el propósito que se vayan familiarizando. Si no tienen computador, ahí está El computador, Listo.
+
+Unknown Speaker  55:41  
+Hechos penalizan porque
+
+Unknown Speaker  56:04  
+por no decir
+
+Unknown Speaker  56:21  
+La mayor
+
+Unknown Speaker  56:40  
+frecuencia cuando
+
+Speaker 1  56:50  
+Uno mira por
+
+Unknown Speaker  56:57  
+ejemplo comunicamos
+
+Unknown Speaker  57:30  
+Estas son las preguntas que Les voy a hacer La
+
+Unknown Speaker  57:36  
+otra clase las 15 y Y
+
+Speaker 1  1:00:40  
+Y tengo Una propuesta
+
+Unknown Speaker  1:02:43  
+No
+
+Unknown Speaker  1:03:19  
+que tuviste está aquí En
+
+Unknown Speaker  1:03:57  
+es que porque te lo y Y
+
+Unknown Speaker  1:07:16  
+Y Y categórico
+
+Unknown Speaker  1:09:48  
+y Los valores son
+
+Unknown Speaker  1:10:17  
+al resto
+
+Unknown Speaker  1:10:42  
+mentira explicando
+
+Speaker 2  1:11:00  
+está escribiendo piensa en otra cosa
+
+Unknown Speaker  1:14:01  
+Bueno
+
+Speaker 2  1:14:19  
+numéricas importante
+
+Speaker 2  1:14:40  
+magnitud entonces precio con que está altamente correlacionado con que está bajamente correlacionado si esta fuera la variable a ver esta cuál es área habitable lo cual tiene sentido calificación también y área habitable sería las top que viene acá importante porque no necesariamente usted necesita todas estas características para estas características. Ahora, adicionalmente, uno puede ver también no solo en relación a la variable de interés, en este caso la señal de supervisión, sino entre las mismas características hay información que le van probablemente hay información que es redundante, es decir, que yo puedo evitar que ven acá redundante. O ¿Cómo pueden identificar zonas que son redundantes? El área del lote, los que están, por ejemplo, las diagonales, pero ustedes pueden ver, por ejemplo, área superior también tiene una alta correlación con la calificación con baño y alto pero ahí la lógica me dice son semánticas diferentes por lo menos las que son de área quizás yo pueda reducir todas en una sola que tienen están altamente correlacionadas y la semántica que transmiten es la misma o muy similar entonces eso quiero que lo analicen en detalle para la próxima parte las tarifas que se les pone ahí en código es por una razón viene un laboratorio ustedes pueden hacer esto con ayuda de IA está permitido, pueden hacer el laboratorio con ayuda a pero en el parcial no lo tienen
+
+Unknown Speaker  1:16:49  
+listo, ustedes
+
+Speaker 2  1:16:51  
+no lo van a usar en estos equipos, van a usarlos en White entonces bajo un ambiente restringido entonces es bueno que ustedes practiquen que les sirva para aprender que no lo van a Tener siempre disponible. Nos vemos entonces el día miércoles entonces el día miércoles resumimos lo que es este lado y pasamos ya a limpieza
+
+Unknown Speaker  1:17:38  
+de ingeniería
+
+Unknown Speaker  1:18:22  
+gracias
+
+Transcribed by https://otter.ai

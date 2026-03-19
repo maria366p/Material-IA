@@ -1,0 +1,205 @@
+Speaker 1  0:04  
+Bachillerato un pronombre que lo las reglas que dominan el buen uso del español y gracias a esas reglas es que en Microsoft, por ejemplo, le subraya usted automáticamente en rojito si se firma perdón en azulito, si tiene una red, si tiene un error, perdón de tipo simpático. Bueno, entonces esas reglas pues para cualquier lenguaje hasta antes de la inteligencia artificial cuando está cualquiera inmediatamente le sale un error de su esto y se ejecuta
+
+Unknown Speaker  1:36  
+extremadamente rápido Eso
+
+Speaker 1  1:47  
+es la simbólica en la simbólica pues es interesante porque pues yo puedo explicar la salida de forma natural por la aplicación de la misma red naturalmente pertenece gratis y ganar implica que es con la alta
+
+Unknown Speaker  2:31  
+sin
+
+Unknown Speaker  2:38  
+ganar todos
+
+Speaker 1  2:54  
+sabemos que fantasmitas huye de papa esa lógica inicial, pues no había en ese momento inteligencia artificial como la tenemos hoy a partir de datos lo que dijo que el programar y eran reglas explícitas
+
+Speaker 1  3:40  
+puede tener muchísimas pero en ese momento los programadores acogen un número más grande que el que los ocupa
+
+Speaker 1  4:10  
+alguien se sentó a programar 2000 y anidados, seguramente tal vez no cierto para que tuvieran cierto nivel de inteligencia los fantasmitas y pues no podía ser cualquier persona. Tenía que ser una persona que conociera el juego, las posiciones dónde me fui con el tablero, las reglas. Bueno, y aún así sigue siendo complejo los primeros sistemas de que trataron de emular el conocimiento de un doctor para hacer predicciones, llámalo así de enfermedades a partir del diagnóstico de enfermedades eran con reglas. Si su colesterol es alto y tiene bradicardia, probabilidad alta de infarto, eran reglas y alguien tenía que construirlo. Lo interesante. Bueno, ustedes dirán, bueno, es complicado. Sí, es muy complicado, pero tiene una ventaja sobre la IA que tenemos hoy en día, y es que yo puedo explicar esas reglas y si me dice a mí tiene tanto porcentaje que le dé un ataque cardíaco, me puede decir por qué apliqué estas reglas. Y estas fueron la IA que vamos a ver qué pasa en datos. Permite resolver el problema al tener las reglas, pero esas reglas no necesariamente son explicables. Listo, no son fácilmente explicables. Les voy a dar unos ejemplos de unos colegas. A un colega en Brasil le pidieron que explicara porque un modelo de lenguaje, supongan ustedes Chanquete, aunque no fue chaqueta simplemente para que se les tenga la cabeza porque generaba un texto discriminatorio en su momento un juez definidor, ingeniero que les explicación neuronal usted tiene cierto, pero pues más allá de eso no porque no sé todo suple entrenamiento bueno entonces ante las dificultades de hacer reglas nace el aprendizaje basado en datos este ejemplo ya los hijos y este es una primera gran clasificación de la inteligencia artificial simbólica y en él actualmente la investigación es cómo uno las ventajas de ambos mundos, cómo puede unir ambas? Eso es lo que está tratando muchos laboratorios de hacer. Bueno, entonces nos vamos a centrar porque este es el curso de aprendizaje de máquina en el área o en la subida de la inteligencia artificial que es basada en datos tiene un nombre que es aprendizaje de máquinas. Ya vimos esta definición y vamos a tener que irla desmembrando. Vamos a hacer este proceso lento aprendizaje de máquina luego vamos a ver aprendizaje profundo hacia el final de la clase 1 suma y el aprendizaje profundo es la idea generativa. Lo primero tenemos que entender el ciclo de vida de soluciones DML entender muy bien el bloque superior de aprendizaje para poder ir bajando Bueno, ya entendimos la macroclasificación. Ahora nos vamos a centrar en una clasificación horizontal por tipos de tareas. Entonces el aprendizaje máquina de una forma muy global, transversal, horizontal se puede clasificar según el tipo de problema que aborda la naturaleza el problema. Entonces tenemos aquí aprendizaje supervisado, no supervisado, el aprendizaje reforzado, tres categorías. Entonces vamos a recorrer cada una de esas categorías. Listo lápices porque alguien
+
+Speaker 1  7:59  
+hablando y tengo otra clase en el que bueno, aprendizaje supervisado ¿Qué significa el aprendizaje? Es decir, existe una señal informativa que me va a decir, oiga, usted lo está haciendo bien, no lo está haciendo bien. Entonces esa señal de supervisión tiene unos nombres particulares, tiene el nombre de etiqueta y si tiene, si le ponemos una etiqueta categórica, perdón, va a recibir el nombre clasificación es un problema de clasificación. Si es esa señal de supervisión no es una categoría, sino es un número real, cierto. Entonces vamos a hablar de un problema de regresión. Tanto la clasificación como la regresión es aprendizaje supervisado. Hay una señal de supervisión porque aquí
+
+Unknown Speaker  9:33  
+regresión
+
+Speaker 1  9:40  
+es una regresión. Ahora todo problema de regresión lo puede volver un problema de clasificación. ¿Cómo yo puedo dividir los rangos en los cuales va a operar ese número real en categorías? Por ejemplo, en el azúcar, cuando usted le hacen un examen, le dicen usted está en riesgo bajo sin riesgo, riesgo bajo, riesgo medio riesgo alto, y ya se vuelve categórico. Listo, no puedo hacerlo inverso. No siempre voy a poder hacerlo inverso. No siembro por volver un problema de clasificación, un problema de regresión, pero siempre un problema de regresión. Yo no puedo volver un problema de clasificación y vamos a ver que eso es una ventaja para construir un método por ejemplo apoyos pues cualquiera así esté haciendo regresión lo puedo volver a un problema de clasificación que es lo que me solicita finalmente los métodos basados en datos bueno es claro listo entonces dependiendo de la señal pues de supervisión puede ser clasificar entonces
+
+Speaker 1  10:49  
+miremos acá varios conceptos que son importantes el primer concepto cuando estamos hablando de aprendizaje supervisado yo tengo un conjunto de datos de entrenamiento aquí vamos a hacer el ejemplo de clasificar spa no spam, tengo unos datos y cuento con información que tiene esa señal de supervisión. ¿de dónde viene esa señal de supervisión? pueden ser de dos cosas. hoy, situándonos en el 2026 , una señal de supervisión humana, alguien se sentó a etiquetar y decir esto es spam, esto no es spam, cierto denominan datos
+
+Unknown Speaker  11:34  
+internos en
+
+Speaker 1  11:38  
+ningún proyecto de clase de esta clase y en ningún taller a menos que siga explícitamente usted va a poder usar datos sintéticos en la competencia. Les conté la competencia de un curso. Bueno, hay una competencia en esa competencia. Si en la segunda parte van a poder hacer datos sintéticos, pero por ahora todos son humanos de alta calidad, es humano. Yo puedo decir que si necesariamente
+
+Unknown Speaker  12:09  
+sintéticos, mucho menos,
+
+Speaker 1  12:12  
+pero uno podría esforzarse porque sean de la mejor calidad posible. Por ejemplo, la premisa tres personas y si la mayoría coincide en la etiqueta, entonces se preserva esos datos de entrenamiento tienen que ser de alta calidad. Por supuesto, si no hay buenos datos y de eso vamos a hablar también más adelante, pues van a haber problemas bien, señales de supervisión correo Bueno, correo malo. Y viene otro concepto importante el algoritmo de aprendizaje, que es muchas personas confunden algoritmos con modelos son dos cosas diferentes. El resultado de aplicar un algoritmo de aprendizaje es un modelo listo. Cuando usted ya lo entrega, tiene un modelo antes, no le va a hacer un recorderis de una forma ahora en dos dimensiones. Eso es una línea recta, listo. Entonces la línea recta pues con la pendiente en varias yo la puedo graficar y al final puede ser una frontera de decisión me puede dividir dos categorías las 10.º y los círculos después no las tres final esto puede ser un algoritmo puede ser finalmente una función matemática y el algoritmo lo que va a intentar hallar son los parámetros de ese modelo matemático que me permite cumplir una función. En este caso, separar las 10.º de los círculos. Puede ser esto puede ser spam estos puntos que son las 10.º y esto de alguna forma voy a tener que transformar el texto en dos dimensiones numéricas y voy a aplicar una línea recta que la separa. El algoritmo lo que me va a permitir es encontrar los hiperparámetros de esa línea recta aquí y puedo decir que va a ser de ese salida binaria y 10.º pues puede ser un vector en dos dimensiones que lo vamos a llamar el vector de características. Eso de dónde viene de los datos del tratamiento? Yo ya sé las características de eso vamos a seguir hablando. No se preocupen si en este momento este momento no es totalmente claro y estas son las salidas. Lo que es desconocido para mí son estos valores la pendiente del país. Mediante algún algoritmo, voy a tener que identificar cuáles son los valores de la pendiente del Bayern para que finalmente encuentre una recta que la separe porque yo podría encontrar miles de rectas no otra recta podría ser esta pero no está fuera mal no me está separando correctamente. Tengo que empezar con algoritmo de aprendizaje a mover esa línea recta para encontrar los mejores valores de esa familia matemática digamos
+
+Speaker 1  15:42  
+hacer un proceso muy muy estricto todo lo que quede por ejemplo si hay a ver por eso es que normalmente uno escoge jueces impares no ocurra eso pero supongamos que tenemos cuatro 2 dicen que ese spa y no es pa se elimina ese dato o sea Se elimina el conjunto de datos no no se utiliza entonces en el momento en que yo ya sé los valores de nitb en ese momento ya no es
+
+Unknown Speaker  16:16  
+deja de ser algo
+
+Speaker 1  16:18  
+del aprendizaje El proceso de aprendizaje y se transforma en un modelo aprendizaje me permite identificar los mejores parámetros de un modelo. Puede ser, por ejemplo, un hiperplano, puede ser un modelo probabilístico basado en valles, puede ser vamos a ver ángulos de decisión hay muchas familias no solamente esta y encuentro los mejores parámetros y en el momento en que encontremos esos parámetros según los datos de entrenamiento se convierte en grupo de listo Y esos parámetros siempre en esta clase vamos a aprender cómo se hace automáticamente esa búsqueda. O sea, van a haber algoritmos. De hecho, por aquí están los que vamos a aprender. Todos esos que están ahí los vamos a enseñar en esta clase cabecinos cercanos. Este que me gusta mucho las marcas de estudios de soporte tiene un fundamento matemático bien fuerte. Interesante los árboles de decisión que son clasificadores débiles y por ser débiles, yo los puedo combinar. No se preocupen si estoy diciendo muchas cosas que en este momento no entienden después lo van a entender. Son clasificadores débiles y por ser débiles tienen una propiedad muy interesante bueno que me permite combinarlos para Hacer métodos arbóreos que son esta que están acá son estrategias para encontrar parámetros de funciones matemáticas que me permiten identificarlos ecuatoriales. La diferencia entre un algoritmo de modelo el algoritmo es simplemente la estrategia con la cual yo voy a encontrar esos parámetros combinado con la familia de función que voy a utilizar el modelo. Es cuando ya encuentro eso listo. Una vez ya tengo ese modelo, quiero saber qué tan bueno es y para eso voy a tener unos datos de prueba. Esos datos de prueba como tiene que ser también tiene que tener una alta calidad tradicionalmente que más para que sea realmente una prueba que sea significativa tiene que ser independiente. No puedo coger de acá y ponerlo acá es como si por ejemplo yo hiciera aquí un ejercicio y les hicieran, les pusieran el mismo ejercicio para el parcial. No estoy evaluando ese objetivo. Pudo haberlo memorizado, no haber aprendido nada. Entonces estos tienen que ser independientes y también de una alta calidad, totalmente independientes. 1 vez leo el buen modelo, yo digo con esos datos no vistos es suficientemente bueno o no listo? Bueno, ese es aprendizaje supervisado con clasificación. Había una señal de supervisión que en este caso era binaria dos categorías. Ahora miremos otra tarea predecir la altura de niños en base a Ciudad del lugar de nacimiento nacimiento
+
+Speaker 1  19:55  
+a la edad que tiene en esa curva. Entonces por acá tengo una tabla estos son los datos de entrenamiento que la edad del país, la altura cierto son muchos con eso aplico un algoritmo de aprendizaje, obtengo un modelo y luego nuevamente evalúo aquí la señal de supervisión cierto la que yo finalmente quiero
+
+Speaker 1  20:32  
+pues finalmente bien y para acá pues hay muchos también algoritmos que uno puede aplicar regresión ideal también puede aplicar la reacción de regresión de CBM bueno bastantes métodos que también vamos
+
+Speaker 1  21:03  
+Sí, sí, una vez ya existe, ya tengo el modelo. Yo puedo hacer algo y es que con nuevos datos me voy dando cuenta que debo actualizar un modelo. Es decir, si aquí tenía un dos y ya no funciona tan bien porque aquí aparece 1/10 oeste suficiente evidencia para decir que
+
+Speaker 1  21:33  
+suficiente evidencia reforzado, pero sí puedo porque, digamos aquí estoy volviendo a aprender sobre nuevos datos que estoy incorporando dentro del conjunto que estoy utilizando como referencia. Se reentrenaría el modelo, pero es un reentrenamiento que no parte
+
+Speaker 1  22:14  
+paréntesis grande aprendizaje basado en instancias versus aprendizaje de modelo. Para que estamos en aprendizaje supervisado, seguimos en supervisados hay dos tipos. Yo puedo caracterizar eso es una clasificación de esta partecita del algoritmo de aprendizaje. El algoritmo de aprendizaje puede ser de instancia, puede ser de modelo. Esto que está explicando acá es de modelo. Hay un modelo matemático, una familia de modelos matemáticos a los cuales voy a encontrar los parámetros. Cierto pasa este vendría siendo, por ejemplo, un no basado modelo, seguramente un modelo de segundo tercero, un polinomio basan en instancia también los llaman modelos de memoria yo quiero supongan que nuevamente estamos en spam 1 spam los triangulitos son spam y los cuadros son no spam Y en vez de construir un modelo yo lo que hago es mirar la nueva instancia que quiero clasificar en ese espacio y características que yo he diseñado si está más cerca de puntos de spa no espada si me hago entender es decir, la clasificación de una nueva instancia no depende de un modelo matemático que esté colocado por una función, sino depende de pares o instancias dentro de mi conjunto de datos. Simplemente pongo el punto en la representación de características y miro cada puntos más cercanos y toma una decisión por voto. Eso lo vamos a ver en un método que es el de vecinos más cercano pero es una clasificación que también les importa. Finalmente, en aprendizaje supervisado hay ventajas evidentes y desventajas evidentes en Amazon.
+
+Unknown Speaker  24:20  
+¿Qué desventajas hay en este desprestancia?
+
+Speaker 1  24:31  
+Demasiado dependiente de los lapsos de entrenamiento bueno el modelo también cierto sin embargo este si dependiendo del diseño de las características se ve extremadamente afectada por eso o sea, usted puede ser si diseña mal el espacio en características esta clasificación puede ser muy mal después la vamos a tener un poquito más el del modelo es menos susceptible a la construcción de características que separen lo más que se pueda los puntos que si están muy juntos, no va a percibir la diferencia. Bueno, hasta aquí alguna pregunta, simplemente estamos viendo los tipos de aprendizajes. Entonces aprendizaje porque el aprendizaje no supervisado, como su nombre lo sugiere, no hay señal de supervisión. Y entonces está raro porque entonces, ¿qué voy a aprender? Ejercicio mental. Aquí hay un conjunto de imágenes y yo te voy a pedir que las clasifiques. ¿Qué grupo
+
+Unknown Speaker  26:02  
+armaniera brócoli, manzana y lo que sea eso
+
+Speaker 2  26:32  
+pero tampoco pero me gusta la
+
+Speaker 1  26:41  
+alcachofa armaría mi propio grupo. Bueno, cuando hablo de aprendizaje no supervisado, se trata de eso, de construcción de grupos. No hay una señal de supervisión. Por lo tanto, finalmente no hay una mala o buena caracterización de grupos depende de lo que sea importante para mí para moderar mi problema. Si yo estoy vendiendo por una plataforma en línea, imagínense Amazon Mercado Libre y quiero segmentar los compradores, mire qué le interesa a usted, no agrúpenos. Entonces los que hacen compras de más de $100000 , de más de $500000 mensual más de $1 millón y dependiendo de eso les mandan campañas diferentes o los compradores de electrodomésticos, aquellos que compran libros y mándenle a cada uno y agrúpelos dependiendo de sus finalmente el aprendizaje no supervisado no hay una señal de supervisión me sirve para describir los datos. Aquí tengo un pequeño ejemplo, que es un ejemplo de detección de anomalías. El aprendizaje no supervisado, lo utilizan para, por ejemplo, no sé si ustedes en los bancos han visto a sus papás cuando hay una transacción que no es común, los conjuntos de transacciones que se hacen llaman para verificar. No sé si han visto eso. Cuando usted hace una compra muy grande, no es una compra en el exterior, lo llaman y le dicen, oiga, usted fue el que hizo esa compra. Bueno, no es que ellos tengan un clasificador de compra buena compra mala, porque no saben, por ejemplo, para una persona comprar tiquetes cada ocho días por cinco años después puede ser normal, pero para otra persona pues eso es algo que se sale de su comportamiento normal. Entonces lo que hace es aplicar aprendizajes supervisables agrupados, agrupan lo que es el comportamiento normal de las personas, un grupo de ellas. Y si sale de repente un puntico fuera de esos grupos, por ejemplo, por acá una transacción que se sale del común de las transacciones que usted hace ahí es cuando lanzan la alerta y lo llaman a usted y le dicen oiga, venga, hay algo que usted nunca ha hecho. Quiero verificar que si usted hizo esa compra, listo, no quiere decir que sea una compra mala, buena, no la están etiquetando, simplemente se sale de lo que ha visto anteriormente de su finalmente comportamiento entonces sirve para caracterizar los datos y identificar puntos que se salen de esa finalmente caracterización que usted desee. Estamos no hay señal de supervisión y vamos a ver diferentes métodos de agrupamiento por eso también el aprendizaje no supervisado lo llaman closet formas de agrupar puntos en un espacio donde esos puntos pues representan un conjunto de características finalmente que usted desee bueno después usted le puede poner etiquetas lo que ustedes pueden lo que vamos a ver que después se puede hacer en los talleres es una vez yo los agrupo yo puedo ponerle etiquetas de esos clústeres y decir oiga, estos son los que les gusta pedir comidas por la aplicación estos son los que les gusta más hacer compras electrodomésticos, estos son los que les gusta más entrar y no comprar nada como en mi caso yo no me diría
+
+Speaker 1  30:38  
+que son interpretaciones finalmente porque depende de las características que estés modelando le vas a tratar de dar una interpretación pero sigue siendo igual difícil yo te voy a decir oiga ustedes dos te quito y Rubén se parece porque pues en el espacio y características que yo diseñé supongamos que esta característica por ejemplo sea valor está muy cerca con el valor de compras que ustedes hacen. Eso es todo lo que va a poder decir. No va a poder decir es mucho más que eso. Por eso es descriptivo. Me permite describir finalmente los elementos. Hay otro que nos interesa mucho en esta clase, que es reducción de dimensionalidad, pero no hemos hablado de características de ingeniería características. Entonces introducirles esto en este momento pues podría ser, pues lo quiero complicar mucho en su momento no es difícil, pero cuando ya veamos muchos más conceptos y sobre todo herramientas matemáticas, lo vamos a entender. Y el último que decía su compañero estrategia post entrenamiento de modelos de lenguaje y el aprendizaje por refuerzo pues tiene que ver con dos cosas que vamos a ver agentes cierto
+
+Unknown Speaker  32:00  
+más adelante vamos a tener que hablar
+
+Speaker 1  32:04  
+entonces una gente interactúa con un entorno, percibe ese entorno de alguna forma y a partir de esas percepciones de ese entorno desarrolla una política de acciones. Eso es lo que se llama una política. Y esa política pues simplemente me especifica ante ciertas percepciones como debería actuar el agente. Ustedes han visto que, bueno, en muchos juegos ya los NPC la mayoría son entrenados con estrategias muy similares, pero hay uno muy famoso. No sé si ustedes han visto juegos casi imposibles que diseñan para que son muy difíciles de mayor voz y que entrenan al agentico con reformas learning para que no cometa ningún error y pase el nivel después para traerles un videíto es un humano jamás para interesante no es pues realmente lo chévere del aprendizaje reforzado es que ve el asunto como si fuera Un agente cualquier problema lo ve como un agente interactúa agente interactuando con un ambiente. Y la forma como se entrena esto es a través de interacción con el ambiente, interactuando con el ambiente. Y si gana más monedas, por ejemplo, en el caso de Mario, pues le voy a dar una recompensa y esa recompensa me va a actualizar mi política. No es como estrategias de estudio. Si usted aplica una estrategia de estudio y le fue bien, entonces usted empieza a incorporarla en su política diaria. Si no le sirvió esa política o esa técnica de estudio, la quita de su política y dice no estudiar un día antes por parcial posible, entonces ya la quita y ya estudia con más anticipación. Bien, esto no alcanzamos a ver en este curso, pero hay un curso del profesor Nicolás Cardoso que la pueden tomar como lectiva si es juez quieren seguir entendiendo el aprendizaje refuerzo realmente es muy muy muy interesante, hay muchas estrategias actuales importante que sí saber es que pues yo tengo que darle alguna recompensa a una penalización Cada vez que interactúo con el entorno, ejecuta una acción que maximiza una función de utilidad. Sí, entonces aquí está el tres en línea y este es un pequeño ejemplito de cuando darle recompensa y cuando darle una penalización. La estrategia es mucho más sofisticada que esto, pero es para que se hagan una idea pura. Bueno, muy bien hasta aquí hay una pregunta
+
+Speaker 1  35:24  
+pregunta Bueno, el aprendizaje por refuerzo usualmente es más costoso que los aprendizaje supervisado clásico. Todo lo que vamos a ver aquí es clásico. Solo hasta el final vamos a ver métodos de aprendizaje profundo. El aprendizaje supervisado ya depende del método métodos ensamblados son el estado del arte, pero lo que hacen es entrenar muchísimos clasificadores débiles. 200 300 también suele ser bastante costoso y el aprendizaje supervisado, no supervisado, perdón, pues depende computacionalmente por La simulación del motor. Bueno, ¿Cuáles son
+
+Speaker 1  36:41  
+los retos del aprendizaje de máquina en general? Primero, la insuficiencia, la insuficiente cantidad de datos. Todo esto depende de datos. Esto es un paper del 2001 que me parece muy interesante. Después voy a seguir metiendo más gráficas de Paper ustedes ven acá es una tarea de LP que es desambiguación, no importa, es una tarea de aprendizaje supervisado. Eso es lo que tienen que saber. Y aquí es diferente supervisado
+
+Speaker 1  37:40  
+esta casa son diferentes métodos o algoritmos para obtener modelos en aprendizaje supervisado aquí está la curacy 1 podría decir bueno si yo no tengo muchos datos cierto por ejemplo estoy por debajo del millón aquí seguramente 200000 datos de ejemplo si hay una diferencia entre los métodos cierto si se dan cuenta de hecho, el de memoria es el que funciona mejor, que es quizás el más trivial de todos. Y, en cambio, los métodos que construyen un modelo matemático, como por ejemplo el perceptron, el mejor sigue siendo el de memoria. Cuando tengo suficientes datos, por ejemplo, en este caso más de 1000 millones de palabras, ya supera, por supuesto, el rebasado en memoria, pero ya casi no hay diferencias perceptibles entre el método y eso es muy interesante. Y eso pasa en los métodos clásicos clásicos. Ustedes van a oír esto en muchos problemas si ustedes tienen suficientes datos, el método es casi no hace la diferencia. ¿Se dan cuenta? La pueden coger cualquiera y si tienen suficientes datos, van a llegar a valores muy similares. Ahora el problema es saber cuántos datos son suficientes para el problema. Ahí es donde viene la expertise del área en cual yo me estoy moviendo. Es diferente en visión que procesamiento lenguaje natural en visión. Por ejemplo, para clasificación de caras después de las 10000 imágenes de caras de personas, la diferencia entre métodos no es Tan diferencias
+
+Speaker 1  40:00  
+elementos entonces pues necesito muchos datos entonces pues necesito muchos datos entre más datos tenga de buena calidad pues mucho mejor otras son los datos no representativos ustedes aquí ven un ejemplo del libro que me parece muy interesante aquí está el ingreso por persona en dólares y por acá está el nivel de satisfacción de las personas. Se encuestaron a muchas personas y les dijeron cuánto gana, está satisfecho con la vida que tiene? Hicieron esta gráfica. Los puntos azules son los puntos con los cuales entrenaron el modelo y les dio la misma punteada que aparece acá. Y de repente fueron y hicieron un análisis con ese modelo, con personas de países que no estaban presentes en los datos de entrenamiento. Entonces fueron le preguntaron, por ejemplo, a un luxemburgués, es uno de los países más ricos y que tienen más
+
+Speaker 1  41:38  
+alineada gana al año, menos de $10000 al año, pero su nivel de satisfacción está por encima de seis. Tampoco tenía mucho sentido en relación a la línea de regresión de cultivos azules. Cierto, ¿Eso a qué se debe? Se debe a algo que se denomina sesgo de muestra. Cuando yo trato de aplicar un modelo en un conjunto de una población que no estaba representada en los datos de entrenamiento si es claro bueno entonces este modelo sirve para los países de las personas que estaban presentes los datos muy rápido que nosotros cumplimos a sus azules que en su mayoría eran Norteamérica y algunos países de áfrica, pero no estaba adecuado ni para países de Europa ni de Latinoamérica en eso se llama sesgo de nuestra y eso es un problema y pasa muy frecuentemente en Colombia pasó un escándalo va a mencionar colombiano que rechazaba créditos. Años de forma excesiva. Lo que hicieron fue importar un modelo de los que vamos a aprender acerca de hecho, una de las prácticas es hacer un modelo de riesgo crediticio importar un modelo de Estados Unidos para Colombia
+
+Unknown Speaker  43:06  
+y pues amigo muestra
+
+Unknown Speaker  43:20  
+persona se
+
+Speaker 1  43:28  
+pero para evitar que pues promover malas prácticas sancionaban de una forma muy horrible a las personas que en teoría decían mentiras. Y era un algoritmo el que decidía si decía mentiras, solo mentiras 1 chuzo, unas madres que no pudieron hacer esos subsidios solteras. Y terminó el suicidio y terminó cambio de gobierno. Bueno, fueron muchas cosas. Entonces estos tienen implicaciones el diseño de estos sistemas y edificaciones bastante serias en algunos casos. Bueno, otros retos que vamos a abordar en detalle mucho más adelante son los datos sin calidad no un proceso riguroso etiquetado es lo más común que se presenta cierto características que son irrelevantes. No hemos hablado que es una característica pero básicamente yo tengo que transformar los datos de entrada en un espacio en el cual se representen las características más importantes del mismo. Entonces, por ejemplo, supongamos para que ya empecemos a hablar de características si yo quiero hacer un sistema de riesgo crediticio, ¿qué características debería preguntar por saber de las personas historial
+
+Unknown Speaker  45:29  
+crediticio si
+
+Speaker 1  45:35  
+está casado si tiene hijos hace cuánto trabaja si es comprar contenido y muy definido le piden también algo Que me parece no me parece muy Muy correcto pero que
+
+Unknown Speaker  46:01  
+No
+
+Speaker 1  46:06  
+me parece tráfico
+
+Unknown Speaker  46:30  
+por
+
+Unknown Speaker  46:41  
+fortuna
+
+Speaker 1  46:48  
+Rubén Manrique? No, por fortuna, mi segundo apellido es muy raro y eso me salva, por ejemplo, en mi caso, pero son cosas que pasan. Bueno, entonces esas son características. Ahora es mucho más difícil en datos no estructurados. Un dato no estructurado es algo que yo no puedo tabular, por ejemplo, un correo electrónico vamos a tener que ver estrategias para extraer características del correo electrónico. Lo más fácil es ver palabras, no palabras tiene esta palabra no la tiene y lo transformo en un vector estado está una palabra cierto cada dimensión del vector una palabra saber si hay caras o no, vamos a tener que buscar mecanismos intermedios para poder representar matemáticamente las imágenes y poder extraer características. Entonces, si yo les traigo las características correctas, pues el problema va a ser muy difícil. Y recuerdo, por ejemplo, una tesis, una tesis la recuerdo mucho que me parecía muy si yo les voy a hacer la pregunta a ustedes, ustedes me dirán si yo quiero clasificar el desempeño estudiantil cierto de forma automática, anticipable, por ejemplo, estoy acá primera clase de Mel y quiero saber cuánto usted va a sacar en clase su nota al final del semestre. ¿Qué características debería extraer créditos inscritos, promedio académico que más gente influye asistencia pero del pasado porque no la va a tener del futuro estamos hoy quiero saber hoy tú cuánto vas a sacar. Tengo solo los datos de antes que estén registrados. Notas de materia. Muy bien
+
+Speaker 1  49:45  
+influyen es y ustedes me dicen si están de acuerdo o no le pidió la altura al estudiante y lo curioso es que lo puso la característica del estudiante la altura exactamente misma pregunta y misma
+
+Speaker 1  50:30  
+pregunta entonces hay características que per se son irrelevantes y que pues usted tiene que usar uno el sentido común 2 pues hay análisis de características y eso lo vamos a Ver entonces tienen que ser características que funcionen. Hay otras sorprendieron que en su momento pues no pero con el análisis de características pues se dieron cuenta que era bastante relevante
+
+Unknown Speaker  51:05  
+1 de esas características es
+
+Speaker 1  51:09  
+el día de la semana en el que se está haciendo la predicción 1 no pensaría bueno eso qué tiene que ver con el movimiento? Tiene mucho que ver con el movimiento de la bolsa alguien que no sepa como yo pues es una característica irrelevante pero para alguien que sepa el día de la semana es crucial no es muy diferente Entonces, todo eso pues tiene que ver con entender en profundidad el problema. Otro de los problemas es sobreajuste, y eso lo vamos a ver con suficiente detalle y estrategias de regularización para evitar el sobreajuste en los modelos. Listo en vez de generalizar, memorice finalmente los datos. Pero no se preocupen, todos esos conceptos los vamos a ver a lo largo del curso con suficiente daño. Vamos a hacer laboratorios para eso. Bueno, finalmente miremos el ciclo del aprendizaje de marketing en el ciclo que ya lo habíamos visto anteriormente, hay un problema de estudios donde se supone usted no tiene cierto nivel de expertise.
+
+Unknown Speaker  52:25  
+Usted tiene datos de alguna forma
+
+Speaker 1  52:29  
+capturados para el problema de estudio y tiene suficientes datos para hacer un proceso de entrenamiento y por supuesto también para hacer un proceso de evaluación. No vamos a tratar en este curso el problema de bajos recursos bajos recursos es cuando no tengo suficientes datos que hago ese problema no lo vamos a abordar todavía en este curso pero si a ustedes les interesa esta línea en los cursos de posgrado que pueden tomar como lectivas y se va a hablar de bajos recursos por ahora tenemos suficientes para el problema en todos los talleres también la competencia va a suponer eso Por supuesto esos datos tienen que ser nuevamente, tiene que uno medir para el problema lo que es relevante y para eso se necesita un expertise básicamente ese problema. Luego con los datos de entrenamiento aplico un algoritmo de aprendizaje que obtiene los parámetros del modelo matemático que estoy tratando de construir. Una vez tengo esos parámetros, voy a obtener un modelo. El modelo es la función matemática, pero ya con los parámetros adecuados encontrados, luego ya tengo ese modelo, cojo el fragmento de prueba y con ese fragmento de prueba lo que voy a hacer es evaluar qué modificar
+
+Speaker 1  54:03  
+algo pregunta para ustedes qué es suficientemente bueno que
+
+Speaker 1  54:26  
+necesito métricas de evaluación. Listo, entonces vamos a tener que ver métricas de evaluación, pero aparte de las métricas de evaluación, vamos a tener que pensar en el problema. Entonces, vamos a tener que estudiar qué métricas, dependiendo del problema que estamos solucionando se aplican, entenderlas en profundidad para saber qué es suficientemente bueno, que es suficientemente malo. Entonces hay problemas que son muy difíciles, muy difíciles en la parte 1 se conforma con que sea mejor que aleatorio un problema de clasificación de dos clases aleatorios 50 % cada uno es cierto si yo digo eso es muy bueno, por ejemplo, para traducción de bajos recursos como lenguas indígenas colombianas. Estamos casi en el 60 clasificación de partes de la oración y estamos satisfechos con eso. No sirve en un entorno real, pero es lo mejor que existe en este momento. Para eso tengo nuevos recursos. Pero si estoy clasificando una enfermedad para saber si le hago un tratamiento contra el cáncer a una persona. Cuánto es un buen porcentaje de precisión. Vamos a ver ese caso, especialmente el de detección de enfermedades para un tratamiento es uno de los casos más difíciles en la práctica porque quiero tener una precisión no del 100 % . eso es imposible. quiero tener una presión que es mejor que la humana. quiero un error que esté por debajo de lo considerado por un humano. entonces, si un humano tomará la decisión, sería peor que la máquina. Lo que pasa es que en muchos casos se le está pidiendo más a la máquina que al mal. Eso es un problema también que estamos enfrentando actualmente, pero es algo con lo cual vamos a tener que odiar. Entonces, dependiendo del problema, decir qué tan bueno qué tan malo, va a cambiar a un sabiendo qué métricas aplicar. Listo. Entonces vamos a ver ese periodo muy bien.
+
+Unknown Speaker  56:51  
+Entonces lo que pasa
+
+Speaker 2  56:58  
+en muchos escenarios
+
+Speaker 1  57:04  
+y volviendo a lo que decía su compañero hace un momento también puede pasar que yo entreno y dataset con un dataset, por ejemplo, hoy 2026 de riesgo crediticio y de repente pueden haber incrementos espantosos del salario mínimo y voy a tener que reentrenar mi modelo de Facebook edificio no puedo seguir operando con los datos anteriores porque voy a tener que ajustarlo porque el espacio de características cambió o tengo nueva información que me va a permitir mejorar mi modelo. Si es claro. Entonces esto es un proceso que realmente es continuo. Yo lanzo finalmente los productos, se actualizan los datos, hago un proceso de selección de datos, vuelvo otra vez y continúo el entrenamiento, pero lo continúo desde el punto donde yo ya me he encontrado, no voy a perder el entrenamiento que ya había hecho mejor mi modelo, lo ajusto a la nueva realidad, evalúo la solución y si estoy satisfecho, continúo y esa va a ser el ciclo finalmente continuo que voy a aplicar para hacer mi ciclo de vida de machín Listo. Bueno, entonces, ¿por dónde voy a tener que empezar el curso? Si ustedes se van si ustedes se dan cuenta, todo empieza a partir de los datos. Entonces lo que viene la siguiente semana es analizar finalmente los datos y hacer entender el proceso de ingeniería de características y hacer dar análisis exploratorio de los datos, lo que viene la siguiente semana, pero ya lo vamos a hacer desde un punto de vista práctico de vista práctico para datos estructurados y no estructurados. Bueno, antes de continuar con la parte de datos que nos queda tiempo, pues sí me gustaría hacer algo que no pude hacer la primera clase y es presentarlos. Trato de memorizarme los nombres de todos en la clase pero pero tiene algo muy
+
+Unknown Speaker  59:14  
+así como yo lo
+
+Speaker 1  59:24  
+perdono se los conté la primera clase es importante que se conozcan porque va a haber una competencia A lo largo del curso y En cuestión de experiencia tienes Que
+
+Unknown Speaker  1:00:08  
+bueno sistemas
+
+Speaker 2  1:01:04  
+voy Julián séptimo soy
+
+Speaker 2  1:01:44  
+Andrés, yo soy ingeniero electrónico también de acá y pues ahorita en séptimo me imagino el sistema
+
+Speaker 3  1:01:58  
+Soy María Paula estoy haciendo doble con industrial y sistemas y voy en octavo no No tengo mi
+
+Unknown Speaker  1:02:06  
+nombre es Sebastián
+
+Speaker 3  1:02:26  
+por siempre y para siempre
+
+Speaker 1  1:02:52  
+gracias por la presentación, pues Vamos a empezar
+
+Speaker 1  1:03:08  
+la próxima semana bastante fuerte con temas de análisis de datos, listo y luego vamos a empezar con el día miércoles con aprendizaje supervisado ya viendo regresión logística y regresión por ahí.
+
+Transcribed by https://otter.ai
